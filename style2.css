@@ -12,12 +12,28 @@
     overflow: hidden;
 }
 
+.topnav {
+    display: none;
+}
+
 .main{
     z-index:-1000;
     right:0; 
     position: absolute; 
     width: 77%; 
     height: 100%;
+}
+
+#name {
+    text-align: center;
+}
+
+#ham_button {
+    display: none;
+}
+
+#position {
+    text-align: center;
 }
 
 body {
@@ -36,7 +52,7 @@ body {
     box-shadow: 3px 3px 10px darkgray;
 }
 
-@media only screen and (max-width:620px) {
+@media only screen and (max-width:1000px) {
 /* For mobile phones: */
     .sidebar, .main, .copyright, .outlinks {
         width:100% !important;
@@ -45,35 +61,72 @@ body {
     }
     .sidebar {
         box-shadow: 0px 3px 7px darkgray;
+        height: auto;
     }
+
+    .tab_links, .outlinks, .tab_dividers {
+        display: none;
+    }
+    
+    .bodymovinanim {
+        display: block;
+        float: right;
+        position: absolute;
+        margin-top: 5%;
+        margin-left: 75%;
+        width: 10% ;
+    }
+
     #self_photo {
-        width: 30%;
+        width: 12%;
+        margin-left: 10%;
+        margin-right: 6%;
+        float:left;
     }
+    #name {
+        position: relative;
+        margin-top: 5%;
+        margin-left: 10%;
+        margin-bottom: 0%;
+        text-align: left;
+    }
+
+    #position {
+        position: relative;
+        margin-bottom: 5%;
+        margin-top: 1%;
+        margin-left: 10%;
+        text-align: left;
+    }
+
     .links_text {
         display: none;
     }
+
     .links {
         display: inline-block;
         font-size: 35px;
         padding: 8px;
     }
+
     footer {
         bottom: 0px !important;
         margin-top: 10px;
     }
+
     .links_icon:hover {
         cursor: pointer;
     }
+
     .outlinks{
         max-height: 100px;
         margin-bottom: 25px;
     }
 }
-
+/*
 @media only screen and (max-height:500px) {
-    /* For mobile phones: */
         #self_photo {
-            width: 25%
+            width: 25%;
         }
         .links_text {
             display: none;
@@ -104,7 +157,13 @@ body {
             margin: 12px;
             font-size: 10px
         }
-    }
+        .sidebar {
+            display: none;
+        }
+        .topnav {
+            display: block;
+        }
+}*/
 
 a {
     color: rgb(0, 0, 0);
@@ -121,15 +180,7 @@ h5 {
     font-size: 50px;
     text-shadow: 0.5px 0.5px 1px #333333;
 }
-.main_text {
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 20px;
-    text-align: justify;
-    text-justify: inter-word;
 
-}
 a:hover {
     color: rgb(100, 100, 100) !important;
     cursor: pointer;
@@ -210,3 +261,59 @@ hr {
     width: 100%;
     text-align: center;
 }
+
+#home {
+    background-color: rgb(100, 100, 100);
+}
+
+#interests {
+    background-color: sandybrown;
+}
+
+#projects {
+    background-color: silver;
+}
+
+#experience {
+    background-color: skyblue;
+}
+
+/*  mobile navigation */
+/*
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+    position: relative;
+
+  }
+  
+  .topnav #myLinks {
+    display: none;
+  }
+  
+  .topnav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+  
+  .topnav a.icon {
+    background: black;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .active {
+    background-color: white;
+    color: white;
+  }
+  */
