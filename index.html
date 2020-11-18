@@ -13,7 +13,7 @@
     <body>
         <div class="sidebar">
             <img id="self_photo" src="me.jpg">
-            <div onclick="showMenu()" class="bodymovinanim"></div>
+            <div class="bodymovinanim"></div>
             
             <h2 id=name>
                 Luís Santos
@@ -147,9 +147,10 @@ let iconMenu = document.querySelector('.bodymovinanim');
 
     var directionMenu = 1;
       iconMenu.addEventListener('click', (e) => {
-      animationMenu.setDirection(directionMenu);
-      animationMenu.play();
-      directionMenu = -directionMenu;
+        animationMenu.setDirection(directionMenu);
+        animationMenu.play();
+        showMenu()
+        directionMenu = -directionMenu;
     });
         </script>
 
