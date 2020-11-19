@@ -13,7 +13,7 @@
     <body>
         <div class="sidebar">
             <img id="self_photo" src="me.jpg">
-            <div class="bodymovinanim"></div>
+            <button class="bodymovinanim"></button>
             
             <h2 id=name>
                 Luís Santos
@@ -133,27 +133,42 @@
             }
         </script>
         <script>
-//Play an animation back on second click
+            //Play an animation back on second click
+            let iconMenu = document.querySelector('.bodymovinanim');
 
-let iconMenu = document.querySelector('.bodymovinanim');
+            let animationMenu = bodymovin.loadAnimation({
+                container: iconMenu,
+                renderer: 'svg',
+                loop: false,
+                autoplay: false,
+                path: "https://raw.githubusercontent.com/thesvbd/Lottie-examples/master/assets/animations/menu.json"
+            });
 
-    let animationMenu = bodymovin.loadAnimation({
-            container: iconMenu,
-            renderer: 'svg',
-            loop: false,
-            autoplay: false,
-            path: "https://raw.githubusercontent.com/thesvbd/Lottie-examples/master/assets/animations/menu.json"
-    });
-
-    var directionMenu = 1;
-      iconMenu.addEventListener('click', (e) => {
-        animationMenu.setDirection(directionMenu);
-        animationMenu.play();
-        showMenu()
-        directionMenu = -directionMenu;
-    });
+            var directionMenu = 1;
+            iconMenu.addEventListener('click', (e) => {
+                animationMenu.setDirection(directionMenu);
+                animationMenu.play();
+                showMenu()
+                directionMenu = -directionMenu;
+            });
         </script>
-
+        <script>
+            window.addEventListener('resize', function(event){
+                let newWidth = window.innerWidth;
+                var x = document.querySelectorAll(".tab_links, .outlinks, .tab_dividers")
+                if (newWidth > 1000) {
+                    for (i=0; i<x.length; i++) {
+                        x[i].style.display = "block";
+                    }
+                }
+                else {
+                    for (i=0; i<x.length; i++) {
+                        x[i].style.display = "none";
+                    }                
+                }
+                
+            });
+        </script>
 
 
     </body>
