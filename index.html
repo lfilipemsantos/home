@@ -92,7 +92,23 @@
             <hr>
             <div id="interests">
                 <h1>these are my interests</h1>
+                <!-- The grid: four columns -->
+                <div class="row">
+                    <div class="column">
+                        <img id="lapa" src="lapa.jpg" alt="Lapa da Meruje" onclick="openModal(this.id);">
+                    </div>
+                    <div class="column">
+                        <img id="penha" src="penha.jpg" alt="Miradouro da Penha" onclick="openModal(this.id);">
+                    </div>
+                    <div class="column">
+                        <img id="pedra" src="pedra.jpg" alt="Miradouro Pedra da Sé" onclick="openModal(this.id);">
+                    </div>
+                    <div class="column">
+                        <img id="caramulinho" src="caramulinho.jpg" alt="Caramulinho" onclick="openModal(this.id);">
+                    </div>
+                </div>   
             </div>
+
             <hr>
             <div id="projects">
                 <h1>these are my projects</h1>    
@@ -237,7 +253,18 @@
         <footer class="copyright">
                 <small>&copy; Copyright 2019, Luís Santos</small>
         </footer>
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
 
+                <!-- The Close Button -->
+                <span class="close" onclick="closeModal();">&times;</span>
+            
+                <!-- Modal Content (The Image) -->
+                <img class="modal-content" id="img01">
+            
+                <!-- Modal Caption (Image Text) -->
+                <div id="caption"></div>
+            </div>
 
         <script>
             function myFunction() {
@@ -299,6 +326,39 @@
                 
             });
         </script>
+        
+        <script>
+            function myFunction(imgs) {
+                // Get the expanded image
+                var expandImg = document.getElementById("expandedImg");
+                // Get the image text
+                var imgText = document.getElementById("imgtext");
+                // Use the same src in the expanded image as the image being clicked on from the grid
+                expandImg.src = imgs.src;
+                // Use the value of the alt attribute of the clickable image as text inside the expanded image
+                imgText.innerHTML = imgs.alt;
+                // Show the container element (hidden with CSS)
+                expandImg.parentElement.style.display = "block";
+                }
+        </script>
 
+        <script>
+            function openModal(img_id) {
+                var modal = document.getElementById("myModal");   
+                var img = document.getElementById(img_id);
+                var modalImg = document.getElementById("img01");
+                var captionText = document.getElementById("caption");
+                modal.style.display = "block";
+                modalImg.src = img.src;
+                captionText.innerHTML = img.alt;
+                
+            }
+        </script>
 
+        <script>
+            function closeModal() {
+                modal.style.display = "none";
+            }
+        </script>
+        
     </body>
