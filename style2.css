@@ -22,6 +22,7 @@
     position: absolute; 
     width: 77%; 
     height: 100%;
+    padding-bottom: 5px;
 }
 
 #name {
@@ -134,47 +135,6 @@ body {
 }
 
 
-/*
-@media only screen and (max-height:500px) {
-        #self_photo {
-            width: 25%;
-        }
-        .links_text {
-            display: none;
-        }
-        .links {
-            display: inline-block;
-            position:static;
-            font-size: 20px;
-        }
-        .outlinks{
-            max-height: 50px;
-            margin-bottom: 10px;
-        }
-        .links_icon:hover {
-            cursor: pointer;
-        }
-        footer {
-            font-size: 10px;
-        }
-        .tab_links {
-            font-size: 13px;
-        }
-        #name {
-            margin-top: 12px;
-            margin-bottom:12px;
-        }
-        #position {
-            margin: 12px;
-            font-size: 10px
-        }
-        .sidebar {
-            display: none;
-        }
-        .topnav {
-            display: block;
-        }
-}*/
 
 a {
     color: rgb(0, 0, 0);
@@ -234,27 +194,17 @@ hr {
     background-color: gray;
 }
 
-.facts_block {
-    margin-left: auto;
-    margin-right: auto;
-    width: 95%;
-    text-align:center;
+.section_header {
+    text-align: center;
 }
-
-.square_fact {
-    display: inline-block;
-    background: lightgray;
-    width: 20vw;
-    height: 20vw;
-    margin: 10px;
-    box-shadow: 2px 2px 7px darkgray;
-    border-radius:5px;
-}
-  
 
 
 .content {
     margin-top:60px;
+}
+
+.exp_divider {
+    background-color: silver;
 }
 
 .activity {
@@ -275,60 +225,21 @@ hr {
 }
 
 #home {
-    background-color: silver;
+    background-color: whitesmoke;
 }
 
 #interests {
-    background-color: sandybrown;
+    background-color: whitesmoke;
 }
 
 #projects {
-    background-color: silver;
+    background-color: whitesmoke;
 }
 
 #experience {
-    background-color: silver;
+    background-color: whitesmoke;
 }
 
-/*  mobile navigation */
-/*
-.topnav {
-    overflow: hidden;
-    background-color: #333;
-    position: relative;
-
-  }
-  
-  .topnav #myLinks {
-    display: none;
-  }
-  
-  .topnav a {
-    color: white;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-    display: block;
-  }
-  
-  .topnav a.icon {
-    background: black;
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  
-  .topnav a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-  
-  .active {
-    background-color: white;
-    color: white;
-  }
-  */
 
 
 /* css for image carousel */
@@ -341,7 +252,7 @@ hr {
   
   /* Style the images inside the grid */
   .column img {
-    opacity: 0.8;
+    opacity: 0.6;
     cursor: pointer;
     width: 100%;
   }
@@ -385,8 +296,8 @@ hr {
 
   .row {
       width: 100%;
-      overflow-x: auto;
-      white-space: nowrap;
+      display: flex;
+      justify-content: center;
   }
 
 
