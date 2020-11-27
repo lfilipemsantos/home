@@ -2,6 +2,10 @@
     display: none;
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+
 .sidebar {
     float:left;
     position:fixed; 
