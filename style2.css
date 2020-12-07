@@ -16,6 +16,9 @@ html {
     overflow: hidden;
 }
 
+.section_divider {
+    width: 100%;
+}
 
 .main{
     z-index:-1000;
