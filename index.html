@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 
-<html style="scroll-behavior: smooth;">
+<html lang="en">
     <head>
+        <title>Luís Filipe Santos - Personal Webpage</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="style2.css">
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.3/lottie_svg.min.js"></script>
-        <script data-ad-client="ca-pub-5014228979419468" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     </head>
 
     <body>
@@ -19,7 +20,7 @@
             <h2 id=name>
                 Luís Filipe Santos
             </h1>
-            <h5 style="color:#333333" id="position">
+            <h5 id="position">
                 System Administrator
             </h5>
             <div class="tabs">
@@ -79,6 +80,8 @@
                 </h1>
                 <h2 class="header_title">
                     Hi fellow visitor. Welcome to my website.
+                    <br>
+                    Here I'll display some of my projects, both personal and professional. Hope you enjoy
                 </h2>
             </div>
             <hr class="section_divider">
@@ -118,71 +121,61 @@
 
             <hr class="section_divider">
             <br>
-            <div id="projects">
+            <div id="projects" style="margin-bottom: 30px;">
                 <h1 class="section_header">:: <em>Projects</em> ::</h1>
-
-                <div class="homePageDiv psWrapper" id="psWrapper">
-    
-                    <div class="projectBox pb4">
-                        <div class="pbContentWrapper">
-                            <p class="pbHeader">Personal Finance App</p>
-                            <p class="pbDate">Date: 03/09/21</p>
-                            <p class="pbDesc">UWP application to manage personal expenses and incomes.</p>
-                            <div class="pbActions">
-                                <a class="pbAct pbA1" href="https://twitter.com/Futur3Sn0w/status/1369283471424716800">Twitter
-                                Post</a>
-                                <a class="pbAct pbA2" href="https://www.reddit.com/r/iOSthemes/comments/m1oav2/setup_duo%C2%B2_ios_144_iphone_6s/">Reddit
-                                Post</a>
-                            </div>
+                <div class="cards">
+                    <div class="card">
+                        <div class="projectTitle">
+                            <p>Finance APP</p>
+                        </div>
+                        <div class="projectDescription">
+                            <br><p style="color:#333333; padding-left: 10px;padding-right: 10px;">UWP application to manage personal expenses and incomes.</p>
                         </div>
                     </div>
-    
-                    <div class="projectBox pb3">
-                        <div class="pbContentWrapper">
-                            <p class="pbHeader">Rotas do Caramulo</p>
-                            <p class="pbDate">Date: 03/04/21</p>
-                            <p class="pbDesc">Website to view details about routes in Caramulo</p>
-                            <div class="pbActions">
-                                <a class="pbAct pbA1" href="https://twitter.com/Futur3Sn0w/status/1367198734287781888">Twitter
-                                Post</a>
-                            </div>
+                    <div class="card">
+                        <div class="projectTitle">
+                            <p>Rotas do Caramulo</p>
+                        </div>
+                        <div class="projectDescription">
+                            <br><p style="color:#333333; padding-left: 10px;padding-right: 10px;">Website to view details about routes in Caramulo.</p>
                         </div>
                     </div>
-    
-                    <div class="projectBox pb2">
-                        <div class="pbContentWrapper">
-                            <p class="pbHeader"><i class="fa fa-windows"></i>Windows 10X in HTML</p>
-                            <p class="pbDate">Date: 11/20/20</p>
-                            <p class="pbDesc">Check out my project where I recreated (some of) Windows 10X in full HTML, CSS, and JS!</p>
-                            <div class="pbActions">
-                                <a class="pbAct pbA1" href="https://futur3sn0w.github.io/Windows10x/">Live Site</a>
-                                <a class="pbAct pbA2" href="https://github.com/Futur3Sn0w/Windows10x">Source Code</a>
-                            </div>
+                    <div class="card">
+                        <div class="projectTitle">
+                            <p>Audio Downloader</p>
+                        </div>
+                        <div class="projectDescription">
+                            <br><p style="color:#333333; padding-left: 10px;padding-right: 10px;">Python program to download audio from videos in YouTube.</p>
                         </div>
                     </div>
-    
-                    <div class="projectBox pb1">
-                        <div class="pbContentWrapper">
-                            <p class="pbHeader">Automatic Traffic Classification</p>
-                            <p class="pbDate">Date: 04/25/20</p>
-                            <p class="pbDesc">ML algorithm to classify traffic data using Naive Bayes</p>
-                            <div class="pbActions">
-                                <a class="pbAct pbA1" href="https://photos.app.goo.gl/eRQEf2TXK63YpXxv9">View Album</a>
-                            </div>
+                    <div class="card">
+                        <div class="projectTitle">
+                            <p>Traffic Classification</p>
+                        </div>
+                        <div class="projectDescription">
+                            <br><p style="color:#333333; padding-left: 10px;padding-right: 10px;">ML algorithm to classify traffic data using Naive Bayes.</p>
                         </div>
                     </div>
-    
+                    <div class="card">
+                        <div class="projectTitle">
+                            <p>IPMA Weather</p>
+                        </div>
+                        <div class="projectDescription">
+                            <br><p style="color:#333333; padding-left: 10px;padding-right: 10px;">Redesign of the IPMA website.</p>
+                        </div>
+                    </div>
                 </div>
-
             </div>
             <hr class="section_divider">
             <br>
             <div id="experience">
                 <h1 class="section_header">:: <em>Experience (so far)</em> ::</h1> 
                 <div class="content" style="width:100%; margin-left: auto; margin-right: auto;">
+                    
+                    <hr class="exp_divider">
                     <div class="activity">
                         <h2 class="activity_title">
-                            Data Scientist Intern
+                            System Administrator
                         </h2>
                         <table style="width:100%; text-align: left;">
                             <tr style="width: 100%;">
@@ -353,7 +346,7 @@
                             Mestrado em Engenharia de Telecomunicações e Informática
                         </h2>
                         <table style="width:100%; text-align: left;">
-                            <tr>
+                            <tr style="width: 100%;">
                                 <th class="activity_icons"> 
                                     <small class="activity_info">
                                         <i class="fa fa-calendar"></i>
@@ -365,7 +358,7 @@
                                     </small>
                                 </th>
                             </tr>
-                            <tr>
+                            <tr style="width: 100%;">
                                 <th class="activity_icons"> 
                                     <small class="activity_info">
                                         <i class="fa fa-map-marker"></i>
@@ -385,7 +378,7 @@
                             Licenciatura em Engenharia de Telecomunicações e Informática
                         </h2>
                         <table style="width:100%; text-align: left;">
-                            <tr>
+                            <tr style="width: 100%;">
                                 <th class="activity_icons"> 
                                     <small class="activity_info">
                                         <i class="fa fa-calendar"></i>
@@ -397,7 +390,7 @@
                                     </small>
                                 </th>
                             </tr>
-                            <tr>
+                            <tr style="width: 100%;">
                                 <th class="activity_icons"> 
                                     <small class="activity_info">
                                         <i class="fa fa-map-marker"></i>
@@ -419,7 +412,7 @@
         </div>
 
         <footer class="copyright">
-                <small>&copy; Copyright 2020, Luís Santos</small>
+                <small style="width: auto;">&copy; Copyright 2020, Luís Santos</small>
         </footer>
             <!-- The Modal -->
             <div id="myModal" class="modal">
@@ -433,17 +426,6 @@
                 <!-- Modal Caption (Image Text) -->
                 <div id="caption"></div>
             </div>
-
-        <script>
-            function myFunction() {
-                var x = document.getElementById("myLinks");
-                if (x.style.display === "block") {
-                    x.style.display = "none";
-                } else {
-                    x.style.display = "block";
-                }
-            }
-        </script>
 
         <script>
             function showMenu() { 
@@ -496,21 +478,6 @@
         </script>
 
         <script>
-            function myFunction(imgs) {
-                // Get the expanded image
-                var expandImg = document.getElementById("expandedImg");
-                // Get the image text
-                var imgText = document.getElementById("imgtext");
-                // Use the same src in the expanded image as the image being clicked on from the grid
-                expandImg.src = imgs.src;
-                // Use the value of the alt attribute of the clickable image as text inside the expanded image
-                imgText.innerHTML = imgs.alt;
-                // Show the container element (hidden with CSS)
-                expandImg.parentElement.style.display = "block";
-                }
-        </script>
-
-        <script>
             function openModal(img_id) {
                 var modal = document.getElementById("myModal");   
                 var img = document.getElementById(img_id);
@@ -532,3 +499,4 @@
         </script>
         
     </body>
+</html>
