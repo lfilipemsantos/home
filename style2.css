@@ -508,6 +508,23 @@ hr {
     }
 }
 
+@media (max-height: 760px) {
+    .links_text {
+        display: none;
+    }
+
+    .links {
+        display: inline-block;
+        font-size: 35px;
+        padding: 8px;
+    }
+    .outlinks{
+        margin-bottom: 80px;
+        margin-top: 10px;
+        height: 40px;
+    }
+}
+
 @media (min-width: 670px) {
     .cards { 
         grid-template-columns: repeat(2, 1fr); 
