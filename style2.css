@@ -446,15 +446,20 @@ hr {
 
 
 .cards { 
-    margin-left: 60px;
-    margin-right: 60px;
+    padding-right: 40px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+    margin-right: 20px;
     display: grid;
     grid-gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: auto auto;
+    grid-template-columns: repeat(3, auto);
+    overflow-y: scroll;
 }
 
 .card {
     max-width: 500px;
+    min-width: 300px;
     background: rgba(49, 78, 78, 0.4);
     transition: background 0.25s ease-in-out !important;
     color: white;
@@ -497,14 +502,20 @@ hr {
     border-bottom-right-radius: 10px;
 }
 
+@media (max-width: 1024px) {
+    .projectDescription {
+        opacity: 1;
+    }
+}
+
 @media (min-width: 670px) {
     .cards { 
         grid-template-columns: repeat(2, 1fr); 
-        margin-left: 150px;
-        margin-right: 150px;
+        margin-left: 60px;
+        margin-right: 60px;
     }
 
-  }
+}
 
 @media (min-width: 1250px) {
     .cards { 
