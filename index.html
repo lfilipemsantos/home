@@ -14,40 +14,48 @@
 
     <body>
         <div class="sidebar">
-            <img id="self_photo" src="images/me.jpg">
-            <div class="bodymovinanim"></div>
-            
-            <h2 id=name>
-                Luís Filipe Santos
-            </h1>
-            <h5 id="position">
-                System Administrator
-            </h5>
+            <div style="width: 100%; margin: 0;">
+                <img id="self_photo" src="images/me.jpg">
+                
+                
+                <h2 id=name>
+                    Luís Filipe Santos
+                </h1>
+                <h5 id="position">
+                    System Administrator
+                </h5>
+            </div>
             <div class="tabs">
                 <hr class="tab_dividers">
-                <h4 class="tab_links">
-                    <a href="#home">HOME</a>
-                </h4>
+                <div class="tab_links">
+                    <h4>
+                        <a href="#home">HOME</a>
+                    </h4>
+                </div>
                 <hr class="tab_dividers">
-
-                <h4 class="tab_links">
-                    <a href="#interests">INTERESTS</a>
-                </h4>
+                <div class="tab_links">
+                    <h4>
+                        <a href="#interests">INTERESTS</a>
+                    </h4>
+                </div>
                 <hr class="tab_dividers">
-
-                <h4 class="tab_links">
-                    <a href="#projects">PROJECTS</a>
-                </h4>
+                <div class="tab_links">
+                    <h4>
+                        <a href="#projects">PROJECTS</a>
+                    </h4>
+                </div>
                 <hr class="tab_dividers">
-
-                <h4 class="tab_links">
-                    <a href="#experience">EXPERIENCE</a>
-                </h4>
+                <div class="tab_links">
+                    <h4>
+                        <a href="#experience">EXPERIENCE</a>
+                    </h4>
+                </div>
                 <hr class="tab_dividers">
-
-                <h4 class="tab_links">
-                    <a href="#education">EDUCATION</a>
-                </h4>
+                <div class="tab_links">
+                    <h4>
+                        <a href="#education">EDUCATION</a>
+                    </h4>
+                </div>
                 <hr class="tab_dividers">
             </div>
             <div class="outlinks">
@@ -78,11 +86,9 @@
                 <h1 class="header_title">
                     MY PERSONAL WEBSITE
                 </h1>
-                <h2 class="header_title">
-                    Hi fellow visitor. Welcome to my website.
-                    <br>
+                <h5 class="header_description">
                     Here I'll display some of my projects, both personal and professional. Hope you enjoy
-                </h2>
+                </h5>
             </div>
             <hr class="section_divider">
             <br>
@@ -462,7 +468,7 @@
         <script>
             window.addEventListener('resize', function(event){
                 let newWidth = window.innerWidth;
-                var x = document.querySelectorAll(".tab_links, .outlinks, .tab_dividers")
+                var x = document.querySelectorAll("")
                 if (newWidth > 1000) {
                     for (i=0; i<x.length; i++) {
                         x[i].style.display = "block";

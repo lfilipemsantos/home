@@ -110,97 +110,30 @@ body {
     cursor: pointer;
 }
 
-@media only screen and (max-width:1000px) {
-/* For mobile phones: */
-    .sidebar, .main, .copyright, .outlinks {
-        width:100% !important;
-        max-width: 100% !important;
-        float: none !important;
-        position: static !important;
-    }
-    .sidebar {
-        box-shadow: 10px 3px 7px darkgray;
-        height: auto;
-    }
-
-    .tab_links, .outlinks, .tab_dividers {
-        display: none;
-    }
-    
-    .bodymovinanim {
-        display: block;
-        position: absolute;
-        margin-top: 3%;
-        margin-left: 80%;
-        width: auto ;
-    }
-
-    #self_photo {
-        width: 10%;
-        margin-top: 30px;
-        margin-left: 5%;
-        margin-right: 6%;
-        float:left;
-    }
-    #name {
-        position: relative;
-        margin-top: 5%;
-        margin-left: 10%;
-        margin-bottom: 0%;
-        text-align: left;
-    }
-
-    #position {
-        position: relative;
-        margin-bottom: 5%;
-        margin-top: 1%;
-        margin-left: 10%;
-        text-align: left;
-        color:#333333
-    }
-
-    .links_text {
-        display: none;
-    }
-
-    .links {
-        display: inline-block;
-        font-size: 35px;
-        padding: 8px;
-    }
-
-    footer {
-        bottom: 0px !important;
-        margin-top: 10px;
-    }
-
-    .links_icon:hover {
-        cursor: pointer;
-    }
-
-    .outlinks{
-        margin-bottom: 10px;
-        margin-top: 10px;
-    }
-}
-
-
 
 a {
     color: rgb(0, 0, 0);
     text-decoration: none;
 }
 
-h5 {
-    text-align: center
-}
 .header_title {
+    text-align: left;
     font-family: 'Titillium Web', sans-serif;
-    margin-top: 0;
-    margin-left: 40px;
+    margin-top: 20px;
+    margin-left: 20px;
     font-weight: bolder;
-    font-size: 50px;
+    font-size: 20px;
     text-shadow: 0.5px 0.5px 1px #333333;
+}
+
+.header_description {
+    text-align: justify;
+    font-family: 'Titillium Web', sans-serif;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-weight: bolder;
+    font-size: 20px;
 }
 
 a:hover {
@@ -227,7 +160,7 @@ footer {
     text-align: center;
 }
 
-h4.tab_links {
+.tab_links >h4 {
     text-align: center;
     width: 100%;
     color: whitesmoke;
@@ -458,8 +391,8 @@ hr {
 }
 
 .card {
-    max-width: 500px;
-    min-width: 300px;
+    max-width: 350px;
+    min-width: 280px;
     background: rgba(49, 78, 78, 0.4);
     transition: background 0.25s ease-in-out !important;
     color: white;
@@ -508,6 +441,21 @@ hr {
     }
 }
 
+@media (min-width: 670px) {
+    .cards { 
+        grid-template-columns: repeat(2, 1fr); 
+        margin-left: 60px;
+        margin-right: 60px;
+    }
+}
+
+@media (min-width: 1250px) {
+    .cards { 
+        grid-template-columns: repeat(3, 1fr); 
+        margin-left: 150px auto;
+        margin-right: 150px auto;
+    }
+}
 @media (max-height: 760px) {
     .links_text {
         display: none;
@@ -518,6 +466,7 @@ hr {
         font-size: 35px;
         padding: 8px;
     }
+    
     .outlinks{
         margin-bottom: 80px;
         margin-top: 10px;
@@ -525,19 +474,100 @@ hr {
     }
 }
 
-@media (min-width: 670px) {
-    .cards { 
-        grid-template-columns: repeat(2, 1fr); 
-        margin-left: 60px;
-        margin-right: 60px;
+@media only screen and (max-width:1000px) {
+    /* For mobile phones: */
+        .sidebar, .main, .copyright, .outlinks {
+            width:100% !important;
+            max-width: 100% !important;
+            float: none !important;
+            position: static !important;
+        }
+    
+        .tabs {
+            margin-top: 1px;
+            padding-right: 8px;
+            display: inline-block;
+            overflow-x: scroll !important;
+            width: 100%;
+            white-space: nowrap;
+        }
+    
+        .tab_links {
+            display: inline-block;
+            margin-top: 8px;
+            margin-bottom: 8px;
+            margin-left: 8px;
+            margin-right: 8px;
+            min-width: 120px;
+            text-align: center;
+        }
+        .tab_links>h4 {
+            border:darkgray 1px solid;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            border-radius: 10px;
+            box-shadow: 0px 10px 10px -10px rgba(0, 0, 0, 0.4);
+            background-color: whitesmoke;
+            margin-top: 0;
+            margin-bottom: 0;
+            font-size: small;
+        }
+    
+        .sidebar {
+            box-shadow: 0px 5px 5px -5px rgba(0, 0, 0, 0.4);
+            height: auto;
+        }
+    
+        .outlinks, .tab_dividers {
+            display: none;
+        }
+    
+        #self_photo {
+            width: 80px;
+            margin-top: 0;
+            margin-left: 5%;
+            margin-right: 6%;
+            float:left;
+        }
+        #name {
+            position: relative;
+            padding-top: 15px;
+            margin-top: 20px;
+            margin-left: 10%;
+            margin-bottom: 0%;
+            text-align: left;
+        }
+    
+        #position {
+            position: relative;
+            margin-bottom: 20px;
+            margin-top: 1%;
+            margin-left: 10%;
+            text-align: left;
+            color:#333333
+        }
+    
+        .links_text {
+            display: none;
+        }
+    
+        .links {
+            display: inline-block;
+            font-size: 35px;
+            padding: 8px;
+        }
+    
+        footer {
+            bottom: 0px !important;
+            margin-top: 10px;
+        }
+    
+        .links_icon:hover {
+            cursor: pointer;
+        }
+    
+        .outlinks{
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
     }
-
-}
-
-@media (min-width: 1250px) {
-    .cards { 
-        grid-template-columns: repeat(3, 1fr); 
-        margin-left: 150px auto;
-        margin-right: 150px auto;
-    }
-}
