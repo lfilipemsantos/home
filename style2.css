@@ -2,6 +2,10 @@
     display: none;
 }
 
+#interests, #projects, #experience, #education, #contacts {
+    display: none;
+}
+
 .sidebar {
     float:left;
     position:fixed; 
@@ -24,7 +28,7 @@
     z-index:-1000;
     right: 0;
     position: absolute; 
-    width:fit-content;
+    width:84%;
     max-width: 84%; 
     height: 100%;
     overflow-x: hidden;
@@ -117,12 +121,11 @@ a {
 }
 
 .header_title {
-    text-align: left;
+    text-align: center;
     font-family: 'Titillium Web', sans-serif;
     margin-top: 20px;
-    margin-left: 20px;
     font-weight: bolder;
-    font-size: 20px;
+    font-size: 40px;
     text-shadow: 0.5px 0.5px 1px #333333;
 }
 

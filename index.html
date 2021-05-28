@@ -29,31 +29,37 @@
                 <hr class="tab_dividers">
                 <div class="tab_links">
                     <h4>
-                        <a href="#home">HOME</a>
+                        <a onclick="switchMain('home')">HOME</a>
                     </h4>
                 </div>
                 <hr class="tab_dividers">
                 <div class="tab_links">
                     <h4>
-                        <a href="#interests">INTERESTS</a>
+                        <a onclick="switchMain('interests')">INTERESTS</a>
                     </h4>
                 </div>
                 <hr class="tab_dividers">
                 <div class="tab_links">
                     <h4>
-                        <a href="#projects">PROJECTS</a>
+                        <a onclick="switchMain('projects')">PROJECTS</a>
                     </h4>
                 </div>
                 <hr class="tab_dividers">
                 <div class="tab_links">
                     <h4>
-                        <a href="#experience">EXPERIENCE</a>
+                        <a onclick="switchMain('experience')">EXPERIENCE</a>
                     </h4>
                 </div>
                 <hr class="tab_dividers">
                 <div class="tab_links">
                     <h4>
-                        <a href="#education">EDUCATION</a>
+                        <a onclick="switchMain('education')">EDUCATION</a>
+                    </h4>
+                </div>
+                <hr class="tab_dividers">
+                <div class="tab_links">
+                    <h4>
+                        <a onclick="switchMain('contacts')">CONTACTS</a>
                     </h4>
                 </div>
                 <hr class="tab_dividers">
@@ -82,7 +88,7 @@
        
 
         <div class="main">
-            <div id="home">
+            <div id="home" style="width: 100%;">
                 <h1 class="header_title">
                     MY PERSONAL WEBSITE
                 </h1>
@@ -90,9 +96,9 @@
                     Here I'll display some of my projects, both personal and professional. Hope you enjoy
                 </h5>
             </div>
-            <hr class="section_divider">
-            <br>
-            <div id="interests">
+
+
+            <div id="interests" style="width: 100%;">
                 <h1 class="section_header">:: <em>Interests</em> ::</h1>
                 <!-- The grid: four columns -->
                 <div class="row" style="text-align: center;">
@@ -125,57 +131,67 @@
                 </div>   
             </div>
 
-            <hr class="section_divider">
-            <br>
-            <div id="projects" style="margin-bottom: 30px;">
+
+            
+            <div id="projects" style="margin-bottom: 30px; width: 100%;">
                 <h1 class="section_header">:: <em>Projects</em> ::</h1>
                 <div class="cards">
-                    <div class="card">
-                        <div class="projectTitle">
-                            <p>Finance APP</p>
+                    <a href="https://github.com/lfilipemsantos/Personal-Finance" target="_blank" rel="noopener noreferrer">
+                        <div class="card">
+                            <div class="projectTitle">
+                                <p>Finance APP</p>
+                            </div>
+                            <div class="projectDescription">
+                                <br><p style="color:#333333; padding-left: 10px;padding-right: 10px;">UWP application to manage personal expenses and incomes.</p>
+                            </div>
                         </div>
-                        <div class="projectDescription">
-                            <br><p style="color:#333333; padding-left: 10px;padding-right: 10px;">UWP application to manage personal expenses and incomes.</p>
+                    </a>
+                    <a href="http://www.google.com" target="_blank" rel="noopener noreferrer">
+                        <div class="card">
+                            <div class="projectTitle">
+                                <p>Rotas do Caramulo</p>
+                            </div>
+                            <div class="projectDescription">
+                                <br><p style="color:#333333; padding-left: 10px;padding-right: 10px;">Website to view details about routes in Caramulo.</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card">
-                        <div class="projectTitle">
-                            <p>Rotas do Caramulo</p>
+                    </a>
+                    <a href="https://github.com/lfilipemsantos/Youtube-Audio-Downloader" target="_blank" rel="noopener noreferrer">
+                        <div class="card">
+                            <div class="projectTitle">
+                                <p>Audio Downloader</p>
+                            </div>
+                            <div class="projectDescription">
+                                <br><p style="color:#333333; padding-left: 10px;padding-right: 10px;">Python program to download audio from videos in YouTube.</p>
+                            </div>
                         </div>
-                        <div class="projectDescription">
-                            <br><p style="color:#333333; padding-left: 10px;padding-right: 10px;">Website to view details about routes in Caramulo.</p>
+                    </a>
+                    <a href="https://github.com/lfilipemsantos/Automatic-Traffic-Classification" target="_blank" rel="noopener noreferrer">
+                        <div class="card">
+                            <div class="projectTitle">
+                                <p>Traffic Classification</p>
+                            </div>
+                            <div class="projectDescription">
+                                <br><p style="color:#333333; padding-left: 10px;padding-right: 10px;">ML algorithm to classify traffic data using Naive Bayes.</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card">
-                        <div class="projectTitle">
-                            <p>Audio Downloader</p>
+                    </a>
+                    <a href="https://github.com/lfilipemsantos/IPMA-weather" target="_blank" rel="noopener noreferrer">       
+                        <div class="card">
+                            <div class="projectTitle">
+                                <p>IPMA Weather</p>
+                            </div>
+                            <div class="projectDescription">
+                                <br><p style="color:#333333; padding-left: 10px;padding-right: 10px;">Redesign of the IPMA website.</p>
+                            </div>
                         </div>
-                        <div class="projectDescription">
-                            <br><p style="color:#333333; padding-left: 10px;padding-right: 10px;">Python program to download audio from videos in YouTube.</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="projectTitle">
-                            <p>Traffic Classification</p>
-                        </div>
-                        <div class="projectDescription">
-                            <br><p style="color:#333333; padding-left: 10px;padding-right: 10px;">ML algorithm to classify traffic data using Naive Bayes.</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="projectTitle">
-                            <p>IPMA Weather</p>
-                        </div>
-                        <div class="projectDescription">
-                            <br><p style="color:#333333; padding-left: 10px;padding-right: 10px;">Redesign of the IPMA website.</p>
-                        </div>
-                    </div>
+                    </a>
                 </div>
             </div>
-            <hr class="section_divider">
-            <br>
+            
+
             <div id="experience">
-                <h1 class="section_header">:: <em>Experience (so far)</em> ::</h1> 
+                <h1 class="section_header">:: <em>Experience</em> ::</h1> 
                 <div class="content" style="width:100%; margin-left: auto; margin-right: auto;">
                     
                     <hr class="exp_divider">
@@ -341,8 +357,8 @@
                     </div>
                 </div>   
             </div>
-            <hr class="section_divider">
-            <br>
+            
+
             <div id="education">
                 <h1 class="section_header">:: <em>Education</em> ::</h1> 
                 <div class="content" style="width:100%; margin-left: auto; margin-right: auto;">
@@ -412,8 +428,15 @@
                     </div>        
                 </div>   
             </div>
-            <hr class="section_divider">
-            <br>
+            
+
+            <div id="contacts">
+                <h1 class="section_header">:: <em>Contacts</em> ::</h1> 
+                <div class="content" style="width:100%; margin-left: auto; margin-right: auto;">
+                    
+           
+                </div>   
+            </div>
 
         </div>
 
@@ -444,26 +467,6 @@
                     }
                 }
             }
-        </script>
-        <script>
-            //Play an animation back on second click
-            let iconMenu = document.querySelector('.bodymovinanim');
-
-            let animationMenu = bodymovin.loadAnimation({
-                container: iconMenu,
-                renderer: 'svg',
-                loop: false,
-                autoplay: false,
-                path: "https://raw.githubusercontent.com/thesvbd/Lottie-examples/master/assets/animations/menu.json"
-            });
-
-            var directionMenu = 1;
-            iconMenu.addEventListener('click', (e) => {
-                animationMenu.setDirection(directionMenu);
-                animationMenu.play();
-                showMenu()
-                directionMenu = -directionMenu;
-            });
         </script>
         <script>
             window.addEventListener('resize', function(event){
@@ -501,6 +504,17 @@
             function closeModal() {
                 var modal = document.getElementById("myModal");
                 modal.style.display = "none";
+            }
+        </script>
+
+        <script>
+            function switchMain(id) {
+                console.log("id:" + id)
+                var main = ["home", "interests", "projects", "experience", "education", "contacts"];
+                for (let i = 0; i < main.length; i++) {
+                    document.getElementById(main[i]).style.display = "none";
+                }
+                document.getElementById(id).style.display = "block";
             }
         </script>
         
