@@ -4,6 +4,7 @@
 
 #interests, #projects, #experience, #education, #contacts {
     display: none;
+    height: auto;
 }
 
 .sidebar {
@@ -459,7 +460,7 @@ hr {
         margin-right: 150px auto;
     }
 }
-@media (max-height: 760px) {
+@media (max-height: 780px) {
     .links_text {
         display: none;
     }
