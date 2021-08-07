@@ -397,7 +397,8 @@ hr {
 .card {
     max-width: 350px;
     min-width: 280px;
-    background: rgba(49, 78, 78, 0.4);
+    /*background: rgba(49, 78, 78, 0.4);*/
+    background: linear-gradient(45deg, rgba(134,226,162,1) 0%, rgba(2,79,49,1) 100%);
     transition: background 0.25s ease-in-out !important;
     color: white;
     padding-top: 10px;
