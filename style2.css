@@ -446,10 +446,10 @@ hr {
     bottom: 0;
     transition: opacity 0.25s ease-in-out !important;
     width: 100%; 
-    height: 200px; 
-    background-image:linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 30%, rgba(255, 255, 255, 0) 100%); 
+    height: 240px; 
+    background-image:linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 40%, rgba(255, 255, 255, 0) 100%); 
     margin-bottom: 0; 
-    margin-top:160px;
+    margin-top:120px;
     position:relative; 
     border-top-left-radius: 00px;
     border-top-right-radius: 00px; 
@@ -459,13 +459,11 @@ hr {
 
 .projectDescription > p {
     margin: 0;
-    margin-top: 110px;
+    margin-top: 150px;
     bottom: 0;
 }
 
-@media (min-width:0) {
-    
-}
+
 
 
 
@@ -484,9 +482,6 @@ hr {
         margin-right: 150px auto;
         margin-top: -50px;
     }
-    .projectDescription {
-        opacity: 0;
-    }
 }
 @media (max-height: 780px) {
     .links_text {
@@ -503,6 +498,12 @@ hr {
         margin-bottom: 80px;
         margin-top: 10px;
         height: 40px;
+    }
+}
+
+@media (pointer: fine) {
+    .projectDescription {
+        opacity: 0;
     }
 }
 
