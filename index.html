@@ -28,33 +28,33 @@
             </div>
             <div class="tabs">
                 <hr class="tab_dividers">
-                <div class="tab_links">
+                <div class="tab_links" onclick="switchMain('home')">
                     <h4>
-                        <a onclick="switchMain('home')">HOME</a>
+                        <a>HOME</a>
                     </h4>
                 </div>
                 <hr class="tab_dividers">
-                <div class="tab_links">
+                <div class="tab_links" onclick="switchMain('projects')">
                     <h4>
-                        <a onclick="switchMain('projects')">PROJECTS</a>
+                        <a>PROJECTS</a>
                     </h4>
                 </div>
                 <hr class="tab_dividers">
-                <div class="tab_links">
+                <div class="tab_links" onclick="switchMain('experience')">
                     <h4>
-                        <a onclick="switchMain('experience')">EXPERIENCE</a>
+                        <a>EXPERIENCE</a>
                     </h4>
                 </div>
                 <hr class="tab_dividers">
-                <div class="tab_links">
+                <div class="tab_links" onclick="switchMain('education')">
                     <h4>
-                        <a onclick="switchMain('education')">EDUCATION</a>
+                        <a>EDUCATION</a>
                     </h4>
                 </div>
                 <hr class="tab_dividers">
-                <div class="tab_links">
+                <div class="tab_links" onclick="switchMain('contacts')">
                     <h4>
-                        <a onclick="switchMain('contacts')">CONTACTS</a>
+                        <a>CONTACTS</a>
                     </h4>
                 </div>
                 <hr class="tab_dividers">
@@ -84,9 +84,7 @@
 
         <div class="main">
             <div id="home" class="section" style="width: 100%;">
-                <h1 class="header_title">
-                    MY PERSONAL WEBSITE
-                </h1>
+                <h1 class="section_header"><em>Home</em></h1>
                 <h5 class="header_description">
                     Here I'll display some of my projects, both personal and professional. Hope you enjoy
                 </h5>
@@ -168,7 +166,7 @@
                         </div>
                     </a>
                     <a href="https://github.com/lfilipemsantos/Automatic-Traffic-Classification" target="_blank" rel="noopener noreferrer">
-                        <div class="card">
+                        <div class="card" style="margin-right: 30px;">
                             <div class="projectTitle">
                                 <p>Traffic Classification</p>
                             </div>
