@@ -402,6 +402,10 @@ hr {
     overflow-y: scroll;
 }
 
+.cards > a {
+    height: 500px;
+}
+
 .card {
     max-width: 350px;
     min-width: 280px;
@@ -491,7 +495,7 @@ hr {
 }
 
 #weather_card {
-    background-image: linear-gradient(45deg, rgb(191, 220, 235) 0%, rgb(183, 210, 214) 14%, rgba(238,213,174,1) 78%, rgba(255,208,229,1) 100%);
+    background-image: linear-gradient(45deg, rgb(191, 220, 235) 0%, rgb(176, 214, 220) 14%, rgb(173, 230, 208) 78%, rgb(243, 229, 235) 100%);
 }
 
 
