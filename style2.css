@@ -17,10 +17,6 @@
     overflow: hidden;
 }
 
-.copyright {
-    width: 16%;
-}
-
 .section_divider {
     width: 100%;
 }
@@ -143,18 +139,6 @@ a {
 a:hover {
     cursor: pointer;
 }
-
-footer {    
-    float:left;
-    position:fixed;
-    bottom: 5px;
-    text-align: center;
-    font-size: 10px;
-    width: 23%;
-    height: 20px;
-    color: rgb(100, 100, 100);
-}
-
 
 .outlinks {
     position: absolute;
@@ -562,7 +546,7 @@ hr {
 
 @media only screen and (max-width:1000px) {
     /* For mobile phones: */
-        .sidebar, .main, .copyright, .outlinks {
+        .sidebar, .main, .outlinks {
             width:100% !important;
             max-width: 100% !important;
             float: none !important;
@@ -641,11 +625,6 @@ hr {
             display: inline-block;
             font-size: 35px;
             padding: 8px;
-        }
-    
-        footer {
-            bottom: 0px !important;
-            margin-top: 10px;
         }
     
         .links_icon:hover {
