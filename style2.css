@@ -378,9 +378,9 @@ hr {
     padding-left: 30px;
     padding-bottom: 0px;
     margin-right: 0px;
-    min-height: 1200px;
+    min-height: 400px;
     display: grid;
-    grid-gap: 30px;
+    grid-gap: 20px;
     grid-template-rows: auto auto;
     grid-template-columns: repeat(5, auto);
     overflow-y: scroll;
@@ -393,7 +393,6 @@ hr {
 
 .card {
     max-width: 350px;
-    min-width: 280px;
     /*background: rgba(49, 78, 78, 0.4);*/
     background-image: linear-gradient(45deg, rgba(186,255,246,1) 0%, rgba(196,240,246,1) 21%, rgba(238,213,174,1) 78%, rgba(255,208,229,1) 100%);
     transition: background-position 0.5s ease-in-out;
@@ -502,17 +501,25 @@ hr {
 }
 
 
-@media (min-width: 670px) {
+@media (min-width: 750px) {
     .cards { 
         grid-template-columns: repeat(2, 1fr); 
-        margin-left: 60px;
-        margin-right: 60px;
+        margin-left: 0px;
+        margin-right: 00px;
     }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1300px) {
     .cards { 
         grid-template-columns: repeat(3, 1fr); 
+        margin-left: 150px auto;
+        margin-right: 150px auto;
+        margin-top: -50px;
+    }
+}
+@media (min-width: 2000px) {
+    .cards { 
+        grid-template-columns: repeat(4, 1fr); 
         margin-left: 150px auto;
         margin-right: 150px auto;
         margin-top: -50px;
