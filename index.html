@@ -14,7 +14,7 @@
     </head>
 
     <body>
-        <div class="sidebar">
+        <div id="sidebar">
             <div style="width: 100%; margin: 0;">
                 <img id="self_photo" src="images/me.jpg">
                 
@@ -142,13 +142,13 @@
                             </div>
                         </div>
                     </a>
-                    <a href="https://github.com/lfilipemsantos/Personal-Finance" target="_blank" rel="noopener noreferrer">
-                        <div id="finance_card" class="card">
+                    <a href="http://www.google.com" target="_blank" rel="noopener noreferrer">
+                        <div id="caramulo_card" class="card">
                             <div class="projectTitle">
-                                <p>Finance APP</p>
+                                <p>Rotas do Caramulo</p>
                             </div>
                             <div class="projectSubtitle">
-                                <p>Application to manage personal expenses and incomes.</p>
+                                <p>Website to view details about routes in Caramulo.</p>
                             </div>
                             <div class="projectIcon">
                                 <div class="projectIconContainer">
@@ -159,13 +159,13 @@
                             </div>
                         </div>
                     </a>
-                    <a href="http://www.google.com" target="_blank" rel="noopener noreferrer">
-                        <div id="caramulo_card" class="card">
+                    <a href="https://github.com/lfilipemsantos/Personal-Finance" target="_blank" rel="noopener noreferrer">
+                        <div id="finance_card" class="card">
                             <div class="projectTitle">
-                                <p>Rotas do Caramulo</p>
+                                <p>Finance APP</p>
                             </div>
                             <div class="projectSubtitle">
-                                <p>Website to view details about routes in Caramulo.</p>
+                                <p>Application to manage personal expenses and incomes.</p>
                             </div>
                             <div class="projectIcon">
                                 <div class="projectIconContainer">
@@ -536,6 +536,23 @@
                 }
                 document.getElementById(id).style.display = "block";
             }
+        </script>
+
+        <script>
+            var prevScrollpos = window.pageYOffset;
+            window.onscroll = function() {
+                var currentScrollPos = window.pageYOffset;
+                console.log(prevScrollpos);
+                if (prevScrollpos > currentScrollPos || prevScrollpos < 100) {
+                    document.getElementById("sidebar").style.top = "0";
+                } 
+                else {
+                    document.getElementById("sidebar").style.top = "-148px";
+                }
+                prevScrollpos = currentScrollPos;
+            }
+
+                
         </script>
         
     </body>

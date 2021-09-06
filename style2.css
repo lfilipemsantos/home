@@ -7,7 +7,7 @@
     height: auto;
 }
 
-.sidebar {
+#sidebar {
     float:left;
     position:fixed; 
     background-color:lightgrey; 
@@ -374,13 +374,13 @@ hr {
 
 
 .cards { 
-    padding-right: 30px;
-    padding-left: 30px;
+    /*padding-right: 30px;
+    padding-left: 30px;*/
     padding-bottom: 0px;
     margin-right: 0px;
     min-height: 400px;
     display: grid;
-    grid-gap: 20px;
+    grid-gap: 15px;
     grid-template-rows: auto auto;
     grid-template-columns: repeat(1, auto);
     overflow-y: scroll;
@@ -388,14 +388,16 @@ hr {
 
 .cards > a {
     height: 350px;
-    padding: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     width: 280px;
+    width: 70%;
     margin-left: auto;
     margin-right: auto;
 }
 
 .card {
-    max-width: 350px;
+    /*max-width: 350px;*/
     /*background: rgba(49, 78, 78, 0.4);*/
     background-image: linear-gradient(45deg, rgba(186,255,246,1) 0%, rgba(196,240,246,1) 21%, rgba(238,213,174,1) 78%, rgba(255,208,229,1) 100%);
     transition: background-position 0.5s ease-in-out;
@@ -506,9 +508,14 @@ hr {
 
 @media (min-width: 735px) {
     .cards { 
-        grid-template-columns: repeat(2, 1fr); 
+        grid-template-columns: repeat(2, auto); 
         margin-left: 0px;
         margin-right: 00px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .cards > a {
+        width: 90%;
     }
 }
 
@@ -557,11 +564,11 @@ hr {
 
 @media only screen and (max-width:1000px) {
     /* For mobile phones: */
-        .sidebar, .main, .outlinks {
+        #sidebar, .main, .outlinks {
             width:100% !important;
             max-width: 100% !important;
             float: none !important;
-            position: static !important;
+            position: static;
         }
     
         .tabs {
@@ -594,9 +601,18 @@ hr {
             font-size: small;
         }
     
-        .sidebar {
+        #sidebar {
             box-shadow: 0px 5px 5px -5px rgba(0, 0, 0, 0.4);
             height: auto;
+            position: fixed;
+            top:0px;
+            max-height: 148px;
+            z-index: 1000;
+            transition: top 0.3s;
+        }
+
+        .main {
+            margin-top: 148px;
         }
     
         .outlinks, .tab_dividers {
