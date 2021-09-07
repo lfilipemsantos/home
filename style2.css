@@ -411,7 +411,7 @@ hr {
     border-radius: 18px;
     box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.08);
     position: relative;
-    transition: transform 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
 .card:hover {
@@ -424,9 +424,9 @@ hr {
     opacity: 1;
 }
 
-.card:hover .projectIconContainer {
+/*.card:hover .projectIconContainer {
     height: 80%;
-}
+}*/
 
 .projectTitle {
     padding: 20px;
@@ -465,7 +465,7 @@ hr {
 }
 
 .projectIconContainer {
-    height: 60%;
+    height: 90%;
     text-align: center;
     margin-left: auto;
     margin-left: auto;
