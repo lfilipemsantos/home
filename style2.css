@@ -434,7 +434,7 @@ hr {
     position: relative;
     top: 0;
     left: 0;
-    height: 12%;
+    height: 22%;
 }
 
 .projectTitle > p {
@@ -460,20 +460,21 @@ hr {
 .projectIcon {
     margin-left: auto;
     margin-right: auto;
-    height: 30%;
-    padding-top: 40px;
+    height: 50%;
+    /*padding-top: 40px;*/
 }
 
 .projectIconContainer {
-    height: 90%;
+    width: 40%;
     text-align: center;
     margin-left: auto;
-    margin-left: auto;
+    margin-right: auto;
+    max-width: 150px;
     transition: height 0.25s ease-in-out;
 }
 
 .projectIconContainer > img {
-    height: 100%;
+    width: 100%;
 }
 
 .projectDescription{
