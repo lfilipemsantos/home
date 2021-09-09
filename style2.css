@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Biotif';
-    src: url('Biotif-SemiBold.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+    src: url('fonts/Biotif-SemiBold.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
   }
 
 ::-webkit-scrollbar {
@@ -15,7 +15,7 @@
 #sidebar {
     float:left;
     position:fixed;
-    background-color: #111; 
+    background-color: rgb(26, 26, 26); 
     width:16%;
     max-width: 280px;
     height:100%;
@@ -188,7 +188,7 @@ a:hover {
 .tab_links > h3 {
     position: relative;
     text-align: center;
-    font-size: 1.2em;
+    font-size: 1.1em;
     width: min-content;
     margin-left: auto;
     margin-right: auto;
@@ -612,30 +612,31 @@ hr {
         }
     
         .tabs {
-            margin-top: 1px;
+            margin-top: 0px;
             padding-right: 8px;
             display: inline-block;
             overflow-x: scroll !important;
             width: 100%;
             white-space: nowrap;
+            height: 100%;
         }
     
         .tab_links {
             display: inline-block;
-            margin-top: 8px;
+            margin-top: 15px;
             margin-bottom: 8px;
             margin-left: 10px;
             margin-right: 10px;
             width: min-content;
             text-align: center;
-            border-radius: 10px;
+            /*border-radius: 10px;*/
             /*background-color: #222;*/
             /*border:darkgray 1px solid;*/
         }
         .tab_links > h3 {
             padding-top: 8px;
             padding-bottom: 8px;
-            box-shadow: 0px 10px 10px -10px rgba(0, 0, 0, 0.4);
+            /*box-shadow: 0px 10px 10px -10px rgba(0, 0, 0, 0.4);*/
             margin-top: 0;
             margin-bottom: 0;
         }
@@ -643,6 +644,7 @@ hr {
         #sidebar {
             box-shadow: 0px 5px 5px -5px rgba(0, 0, 0, 0.4);
             height: auto;
+            max-height: 90px;
             position: fixed;
             top:0px;
             max-height: 148px;
