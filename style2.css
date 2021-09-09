@@ -17,6 +17,7 @@
     position:fixed;
     background-color: #111; 
     width:16%;
+    max-width: 280px;
     height:100%;
     box-shadow: 3px 0px 7px rgb(7, 7, 7);
     overflow: hidden;
@@ -78,8 +79,12 @@ body {
     box-shadow: 3px 3px 10px rgb(3, 3, 3);
 }
 
-.tab_links, .outlinks, .tab_dividers {
+.tab_links, .outlinks/*, .tab_dividers */{
     display: block;
+}
+
+.tab_dividers{
+    display: none;
 }
 
 .psWrapper {
@@ -154,14 +159,38 @@ a:hover {
     text-align: center;
 }
 
-.tab_links:hover {
-    cursor: pointer;
-    background:rgb(12, 12, 12);
+.tab_links {
+    position: relative;
+    margin-bottom: 50px;
 }
 
-.tab_links >h4 {
-    text-align: center;
+.tab_links > h4 > a::before {
+    content: '';
+    display: block;
+    position: absolute;
     width: 100%;
+    height: 3px;
+    bottom:0;
+    background-color: rgb(103, 177, 190);
+    opacity: 0;
+    transition: opacity cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+}
+
+.tab_links:hover {
+    cursor: pointer;
+}
+
+.tab_links:hover > h4 > a::before{
+    opacity:1;
+}
+
+
+.tab_links >h4 {
+    position: relative;
+    text-align: center;
+    width: min-content;
+    margin-left: auto;
+    margin-right: auto;
     color: white;
 }
 
