@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Biotif';
+    src: url('Biotif-SemiBold.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+  }
+
 ::-webkit-scrollbar {
     display: none;
 }
@@ -54,7 +59,7 @@ body {
     margin:0;
     background-color: #111;
     color: white;
-    font-family: Montserrat;
+    font-family: 'Biotif', sans-serif;
     width: 100%;
 }
 
@@ -120,7 +125,7 @@ a {
 
 .header_title {
     text-align: center;
-    font-family: 'Titillium Web', sans-serif;
+    font-family: 'Biotif';
     margin-top: 20px;
     font-weight: bolder;
     font-size: 40px;
@@ -129,7 +134,7 @@ a {
 
 .header_description {
     text-align: justify;
-    font-family: 'Titillium Web', sans-serif;
+    font-family: 'Biotif', sans-serif;
     margin-top: 20px;
     margin-left: 20px;
     margin-right: 20px;
