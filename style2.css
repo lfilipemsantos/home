@@ -280,11 +280,10 @@ hr {
 
 
 .cards > a {
-    height: 350px;
+    height: 400px;
     padding-top: 15px;
     padding-bottom: 15px;
-    width: 280px;
-    width: 70%;
+    width: 300px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -301,10 +300,9 @@ hr {
     padding-right: 0;
     padding-left: 0;
     padding-bottom: 0;
-    height: 350px;
-    width: 400px;
-    border-radius: 13px;
-    box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.08);
+    height: 400px;
+    width: 300px;
+    border-radius: 15px;
     position: relative;
     transition: all 0.2s ease-in-out;
 }
@@ -317,9 +315,10 @@ hr {
     left: -5px;*/
     background-color: white;
     background-image: linear-gradient(45deg, rgba(186,255,246,1) 0%, rgba(196,240,246,1) 21%, rgba(238,213,174,1) 78%, rgba(255,208,229,1) 100%);
-    width: 100%;
-    height: 100%;
-    transform: scale(1.03);
+    width: 310px;
+    height: 410px;
+    top: -5px;
+    left: -5px;
     z-index: -1;
 }
 
