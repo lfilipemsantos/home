@@ -134,6 +134,13 @@ a {
     max-width: 600px
 }
 
+@media (max-width: 620px) {
+    .header_description {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
 a:hover {
     cursor: pointer;
 }
@@ -462,6 +469,7 @@ hr {
         margin-right: 150px auto;
     }
 }
+
 @media (min-width: 2100px) {
     .cards { 
         grid-template-columns: repeat(5, 1fr); 
