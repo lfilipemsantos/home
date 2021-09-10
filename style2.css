@@ -18,6 +18,10 @@
     height: 70px;
     overflow: hidden;
     display: inline-block;
+    position: fixed;
+    top:0;
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
 }
 
 .section_divider {
@@ -28,7 +32,7 @@
     width:100%;
     height: 100%;
     scroll-behavior: smooth;
-    margin-top: 20px;
+    margin-top: 110px;
 }
 
 #name {
@@ -144,8 +148,8 @@ a:hover {
     display: inline-block;
     position: relative;
     top:50%;
-    transform: translateY(-14%);
-    height: 100%;
+    transform: translateY(-35%);
+    height: 40%;
     margin-top: auto;
     margin-bottom: auto;
     margin-left: 40px;
@@ -368,12 +372,12 @@ hr {
 .projectIcon {
     margin-left: auto;
     margin-right: auto;
-    height: 50%;
-    /*padding-top: 40px;*/
+    height: 30%;
+    margin-top: 30px;
 }
 
 .projectIconContainer {
-    width: 40%;
+    width: 35%;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
