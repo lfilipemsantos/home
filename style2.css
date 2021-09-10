@@ -278,6 +278,7 @@ hr {
     color: black;
 }
 
+
 .cards > a {
     height: 350px;
     padding-top: 15px;
@@ -290,30 +291,46 @@ hr {
 
 .card {
     /*max-width: 350px;*/
-    /*background: rgba(49, 78, 78, 0.4);*/
+    /*background: rgba(49, 78, 78, 0.4);
     background-image: linear-gradient(45deg, rgba(186,255,246,1) 0%, rgba(196,240,246,1) 21%, rgba(238,213,174,1) 78%, rgba(255,208,229,1) 100%);
     transition: background-position 0.5s ease-in-out;
     background-position: left;
-    background-size: 300%;
-    color: black;
+    background-size: 300%;*/
+    background-color: #111;
+    color: white;
     padding-right: 0;
     padding-left: 0;
     padding-bottom: 0;
     height: 350px;
-    border-radius: 18px;
+    width: 400px;
+    border-radius: 13px;
     box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.08);
     position: relative;
     transition: all 0.2s ease-in-out;
 }
 
+.card:before {
+    content: '';
+    position: absolute;
+    border-radius: 18px;
+    /*top: -5px;
+    left: -5px;*/
+    background-color: white;
+    background-image: linear-gradient(45deg, rgba(186,255,246,1) 0%, rgba(196,240,246,1) 21%, rgba(238,213,174,1) 78%, rgba(255,208,229,1) 100%);
+    width: 100%;
+    height: 100%;
+    transform: scale(1.03);
+    z-index: -1;
+}
+
+
 .card:hover {
     cursor: pointer;
-    background-position: right;
-    transform: scale(1.05);
+    background-color: #222;
 }
 
 .card:hover .projectDescription{
-    opacity: 1;
+    opacity: 0;
 }
 
 /*.card:hover .projectIconContainer {
@@ -370,7 +387,7 @@ hr {
 }
 
 .projectDescription{
-    opacity:1; 
+    opacity:0; 
     bottom: 0;
     transition: opacity 0.25s ease-in-out;/*, height 0.25s ease-in-out*/;
     width: 100%;
@@ -385,16 +402,16 @@ hr {
     border-bottom-right-radius: 18px;
 }
 
-#weather_card {
-    background-image: linear-gradient(45deg, rgb(191, 220, 235) 0%, rgb(176, 214, 220) 14%, rgb(173, 230, 208) 78%, rgb(73, 219, 158) 100%);
+#weather_card::before {
+    background-image: linear-gradient(45deg, rgb(191, 220, 235) 0%, rgb(176, 214, 220) 14%, rgb(173, 230, 208) 78%, rgb(73, 219, 158) 100%);*/
 }
-#finance_card {
+#finance_card::before {
     background-image: linear-gradient(45deg, rgb(126, 189, 155) 0%, rgb(118, 214, 197) 20%, rgb(173, 230, 208) 78%, rgb(243, 229, 235) 100%);
 }
-#caramulo_card {
+#caramulo_card::before {
     background-image: linear-gradient(45deg, rgb(230, 188, 110) 0%, rgb(199, 220, 143) 20%, rgb(173, 230, 208) 78%, rgb(243, 229, 235) 100%);
 }
-#audio_card {
+#audio_card::before {
     background-image: linear-gradient(45deg, rgb(230, 110, 110) 0%, rgb(238, 211, 201) 30%, rgb(173, 230, 208) 78%, rgb(243, 229, 235) 100%);
 }
 
