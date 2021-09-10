@@ -139,10 +139,26 @@ a:hover {
 }
 
 .outlinks {
-    position: absolute;
-    bottom: 40px;
     width: 100%;
     text-align: center;
+}
+
+
+.links_text {
+    display: block;
+    font-size: 0.5em;
+}
+
+.links {
+    display: inline-block;
+    font-size: 35px;
+    padding: 8px;
+    width: 100px;
+    margin-top: 0;
+}
+
+.links_icon:hover {
+    cursor: pointer;
 }
 
 .tab_links {
@@ -177,7 +193,7 @@ a:hover {
 
 .tab_links:hover .link::before {
     opacity:1;
-    transform: translateZ(0) scale3d(1.1,1.1,1.1) rotate(-2deg);
+    transform: translateZ(0) scale3d(1.1,1.1,1.1) rotate(0deg);
 }
 
 .link_container {
@@ -427,15 +443,12 @@ hr {
         grid-template-columns: repeat(2, auto); 
         margin-left: 0px;
         margin-right: 00px;
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-    .cards > a {
-        width: 90%;
+        margin-left: 20px;
+        margin-right: 20px;
     }
 }
 
-@media (min-width: 1300px) {
+@media (min-width: 1100px) {
     .cards { 
         grid-template-columns: repeat(3, 1fr); 
         margin-left: 150px auto;
@@ -456,23 +469,6 @@ hr {
         margin-right: 150px auto;
     }
 }
-@media (max-height: 780px) {
-    .links_text {
-        display: none;
-    }
-
-    .links {
-        display: inline-block;
-        font-size: 35px;
-        padding: 8px;
-    }
-    
-    .outlinks{
-        margin-bottom: 80px;
-        margin-top: 10px;
-        height: 40px;
-    }
-}
 
 @media (pointer: fine) {
     .projectDescription {
@@ -484,25 +480,6 @@ hr {
 }
 
 @media only screen and (max-width:1000px) {
-    
-    .links_text {
-        display: none;
-    }
-
-    .links {
-        display: inline-block;
-        font-size: 35px;
-        padding: 8px;
-    }
-
-    .links_icon:hover {
-        cursor: pointer;
-    }
-
-    .outlinks{
-        margin-bottom: 10px;
-        margin-top: 10px;
-    }
     .section_header {
         font-size: 200px;
         margin-top: 80px;
