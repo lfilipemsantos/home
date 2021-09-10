@@ -13,14 +13,12 @@
 }
 
 #sidebar {
-    float:left;
-    position:fixed;
     background-color: rgb(26, 26, 26); 
-    width:16%;
-    max-width: 280px;
+    width:100%;
     height:100%;
     box-shadow: 3px 0px 7px rgb(7, 7, 7);
     overflow: hidden;
+    display: inline-block;
 }
 
 .section_divider {
@@ -28,13 +26,8 @@
 }
 
 .main{
-    z-index:-1000;
-    right: 0;
-    position: absolute; 
-    width:84%;
-    max-width: 84%; 
+    width:100%;
     height: 100%;
-    overflow-x: hidden;
     scroll-behavior: smooth;
 }
 
@@ -79,13 +72,14 @@ body {
     box-shadow: 3px 3px 10px rgb(3, 3, 3);
 }
 
-.tab_links, .outlinks/*, .tab_dividers */{
+.outlinks/*, .tab_dividers */{
     display: block;
 }
 
 .tab_dividers{
     display: none;
 }
+
 
 .psWrapper {
     width: 100%;
@@ -161,7 +155,10 @@ a:hover {
 
 .tab_links {
     position: relative;
-    margin-bottom: 50px;
+    display: inline-block;
+    margin-left: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .tab_links > h3 > a::before {
@@ -218,7 +215,7 @@ hr {
 }
 
 .section {
-    margin-top: 200px;
+    margin-top: 40px;
 }
 
 
@@ -237,6 +234,7 @@ hr {
     margin-bottom: 45px;
     border-radius: 15px;
     width: 70%;
+    max-width: 400px;
     padding: 20px;
     /*background-image: linear-gradient(45deg, rgba(150, 208, 200, 1) 0%, rgba(196,240,246,1) 21%, rgba(238,213,174,1) 78%, rgba(255,208,229,1) 100%);*/
     background-position: left;
@@ -605,8 +603,6 @@ hr {
 @media only screen and (max-width:1000px) {
     /* For mobile phones: */
         #sidebar, .main, .outlinks {
-            width:100% !important;
-            max-width: 100% !important;
             float: none !important;
             position: static;
         }
@@ -708,6 +704,6 @@ hr {
             margin-top: 80px;
         }
         .section {
-            margin-top: 100px;
+            margin-top: 0px;
         }
     }
