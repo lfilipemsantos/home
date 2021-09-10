@@ -15,7 +15,7 @@
 #sidebar {
     background-color: rgb(26, 26, 26); 
     width:100%;
-    height:100%;
+    height: 70px;
     overflow: hidden;
     display: inline-block;
 }
@@ -141,14 +141,19 @@ a:hover {
 }
 
 .tab_links {
-    position: relative;
     display: inline-block;
+    position: relative;
+    top:50%;
+    transform: translateY(-14%);
+    height: 100%;
+    margin-top: auto;
+    margin-bottom: auto;
     margin-left: 40px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    /*margin-top: 20px;
+    margin-bottom: 20px;*/
 }
 
-.tab_links > h3 > a::before {
+.link::before {
     content: '';
     display: block;
     position: absolute;
@@ -164,23 +169,37 @@ a:hover {
     cursor: pointer;
 }
 
-.tab_links:hover > h3 > a::before{
+.tab_links:hover .link::before {
     opacity:1;
 }
 
-
-.tab_links > h3 {
+.link_container {
     position: relative;
+    top: 50%;
+    transform: translateY(100%);
+}
+
+.link {
+    margin:0;
     text-align: center;
-    font-size: 1.1em;
+    font-size: 1.17em;
+    line-height: 1.17em;
     width: min-content;
-    margin-left: auto;
-    margin-right: auto;
     color: white;
+    vertical-align: middle;
 }
 
 .tabs {
     width: 100%;
+    overflow: scroll;
+    height: 70px;
+}
+
+#tabs_container {
+    display: inline-block;
+    width: max-content;
+    margin-right: 40px;
+    height: 100%;
 }
 
 hr {
@@ -437,76 +456,6 @@ hr {
 }
 
 @media only screen and (max-width:1000px) {
-   
-        .tabs {
-            margin-top: 0px;
-            padding-right: 8px;
-            display: inline-block;
-            overflow-x: scroll !important;
-            width: 100%;
-            white-space: nowrap;
-            height: 100%;
-        }
-    
-        .tab_links {
-            display: inline-block;
-            margin-top: 15px;
-            margin-bottom: 8px;
-            margin-left: 10px;
-            margin-right: 10px;
-            width: min-content;
-            text-align: center;
-            /*border-radius: 10px;*/
-            /*background-color: #222;*/
-            /*border:darkgray 1px solid;*/
-        }
-        .tab_links > h3 {
-            padding-top: 8px;
-            padding-bottom: 8px;
-            /*box-shadow: 0px 10px 10px -10px rgba(0, 0, 0, 0.4);*/
-            margin-top: 0;
-            margin-bottom: 0;
-        }
-    
-        #sidebar {
-            box-shadow: 0px 5px 5px -5px rgba(0, 0, 0, 0.4);
-            height: auto;
-            max-height: 90px;
-            position: fixed;
-            top:0px;
-            max-height: 148px;
-            z-index: 1000;
-            transition: top 0.3s;
-        }
-
-        .outlinks, .tab_dividers {
-            display: none;
-        }
-    
-        #self_photo {
-            width: 60px;
-            margin-top: 0;
-            margin-left: 5%;
-            margin-right: 6%;
-            float:left;
-        }
-        #name {
-            position: relative;
-            padding-top: 4px;
-            margin-top: 20px;
-            margin-left: 10%;
-            margin-bottom: 0%;
-            text-align: left;
-        }
-    
-        #position {
-            position: relative;
-            margin-bottom: 20px;
-            margin-top: 1%;
-            margin-left: 10%;
-            text-align: left;
-            color:#333333
-        }
     
         .links_text {
             display: none;
