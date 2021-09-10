@@ -92,45 +92,13 @@
                             I'm Luís
                         </h1>
                     </div>
-                    <div style="display: block; width: 30%; text-align: center;">
+                    <div style="display: block; width: 100%; max-width: 600px; text-align: center;">
                         <img id="" style="width: 100%; border-radius: 0px; opacity: 0.4;" src="images/me2.jpg">
                     </div>
                 </div>
                 <h5 class="header_description">
                     Here I'll display some of my projects, both personal and professional. I've recently wanted to improve my front-end web skills and grow my knowledge about PWAs, so my latest projects will focus mainly on those two subjects.
                 </h5>
-
-            
-                <!-- The grid: four columns-->
-                <!-- <div class="row" style="text-align: center;">
-                    <div class="column">
-                        <img class="photo" id="lapa" src="images/lapa.jpg" alt="Lapa da Meruje" onclick="openModal(this.id);">
-                    </div>
-                    <div class="column">
-                        <img class="photo" id="penha" src="images/penha.jpg" alt="Miradouro da Penha" onclick="openModal(this.id);">
-                    </div>
-                    <div class="column">
-                        <img class="photo" id="pedra" src="images/pedra.jpg" alt="Miradouro Pedra da Sé" onclick="openModal(this.id);">
-                    </div>
-                    <div class="column">
-                        <img class="photo" id="caramulinho" src="images/caramulinho.jpg" alt="Caramulinho" onclick="openModal(this.id);">
-                    </div>
-                </div>   
-                <div class="row" style="text-align: center;">
-                    <div class="column">
-                        <img class="photo" id="lapa" src="images/lapa.jpg" alt="Lapa da Meruje" onclick="openModal(this.id);">
-                    </div>
-                    <div class="column">
-                        <img class="photo" id="penha" src="images/penha.jpg" alt="Miradouro da Penha" onclick="openModal(this.id);">
-                    </div>
-                    <div class="column">
-                        <img class="photo" id="pedra" src="images/pedra.jpg" alt="Miradouro Pedra da Sé" onclick="openModal(this.id);">
-                    </div>
-                    <div class="column">
-                        <img class="photo" id="caramulinho" src="images/caramulinho.jpg" alt="Caramulinho" onclick="openModal(this.id);">
-                    </div>
-                </div>  
-                 --> 
             </div>
 
 
@@ -560,19 +528,6 @@
 
         </div>
 
-        <!-- The Modal -->
-        <div id="myModal" class="modal">
-
-            <!-- The Close Button -->
-            <span class="close" onclick="closeModal();">&times;</span>
-        
-            <!-- Modal Content (The Image) -->
-            <img class="modal-content" id="img01">
-        
-            <!-- Modal Caption (Image Text) -->
-            <div id="caption"></div>
-        </div>
-
         <script>
             function showMenu() { 
                 var x = document.querySelectorAll(".tab_links, .outlinks, .tab_dividers")
@@ -601,27 +556,6 @@
                 }
                 
             });
-        </script>
-
-        <script>
-            function openModal(img_id) {
-                var modal = document.getElementById("myModal");   
-                var img = document.getElementById(img_id);
-                var modalImg = document.getElementById("img01");
-                var captionText = document.getElementById("caption");
-                modal.style.display = "block";
-                img.style.borderRadius = "10px";
-                modalImg.src = img.src;
-                captionText.innerHTML = img.alt;
-                
-            }
-        </script>
-
-        <script>
-            function closeModal() {
-                var modal = document.getElementById("myModal");
-                modal.style.display = "none";
-            }
         </script>
 
         <script>
