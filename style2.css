@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'Biotif';
     src: url('fonts/Biotif-SemiBold.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
-  }
+}
 
 ::-webkit-scrollbar {
     display: none;
@@ -162,6 +162,10 @@ a:hover {
     padding: 8px;
     width: 100px;
     margin-top: 0;
+}
+
+.links:hover .links_text, .links:hover .links_icon {
+    color: rgb(103, 177, 190); 
 }
 
 .links_icon:hover {
