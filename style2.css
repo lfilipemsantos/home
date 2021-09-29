@@ -77,7 +77,25 @@ body {
 }
 
 .outlinks/*, .tab_dividers */{
-    display: block;
+    display: grid;
+    grid-gap: 50px;
+    grid-template-rows: auto auto;
+    grid-template-columns: repeat(1, auto);
+    justify-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 300px) {
+    .outlinks { 
+        grid-template-columns: repeat(2, auto); 
+    }
+}
+
+@media (min-width: 700px) {
+    .outlinks { 
+        grid-template-columns: repeat(4, auto); 
+    }
 }
 
 .tab_dividers{
