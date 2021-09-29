@@ -76,12 +76,15 @@ body {
     box-shadow: 3px 3px 10px rgb(3, 3, 3);
 }
 
-.outlinks/*, .tab_dividers */{
+.outlinks{
+    padding-top: 50px;
+    width: max-content;
     display: grid;
-    grid-gap: 50px;
-    grid-template-rows: auto auto;
-    grid-template-columns: repeat(1, auto);
+    grid-gap: 30px;
+    grid-template-rows: 80px 80px;
+    grid-template-columns: repeat(1, 100px);
     justify-items: center;
+    text-align: center;
     margin-left: auto;
     margin-right: auto;
 }
@@ -92,7 +95,7 @@ body {
     }
 }
 
-@media (min-width: 700px) {
+@media (min-width: 520px) {
     .outlinks { 
         grid-template-columns: repeat(4, auto); 
     }
@@ -163,12 +166,6 @@ a:hover {
     cursor: pointer;
 }
 
-.outlinks {
-    width: 100%;
-    text-align: center;
-}
-
-
 .links_text {
     display: block;
     font-size: 0.5em;
@@ -177,7 +174,6 @@ a:hover {
 .links {
     display: inline-block;
     font-size: 35px;
-    padding: 8px;
     width: 100px;
     margin-top: 0;
 }
