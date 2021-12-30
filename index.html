@@ -16,17 +16,6 @@
 
     <body>
         <div id="sidebar">
-            <!--<div style="width: 100%; margin: 0;">
-                <img id="self_photo" src="images/me.jpg">
-                
-                
-                <h2 id=name>
-                    Luís Filipe Santos
-                </h1>
-                <h5 id="position">
-                    System Administrator
-                </h5>
-            </div>-->
             <div class="tabs">
                 <div id="tabs_container">
                     <div class="tab_links" onclick="switchMain('home')">
@@ -51,8 +40,6 @@
 
         <div class="main">
             <div id="home" class="section" style="width: 100%;">
-
-                
                 <svg style="position: absolute; z-index:-3000; transform: scale(0.5); top:-40%; left: -40%" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
                     <defs>
                         <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
@@ -71,27 +58,25 @@
                     </defs>
                     <path id="blob" d="M417,289.5Q372,329,347.5,370Q323,411,275.5,408.5Q228,406,184.5,391Q141,376,105.5,339.5Q70,303,89.5,256Q109,209,121,162Q133,115,177.5,83.5Q222,52,282,50.5Q342,49,358.5,109.5Q375,170,418.5,210Q462,250,417,289.5Z" fill="none" stroke-width="4px" stroke="url(#gradient)"></path>
                 </svg>
-                <!--<h1 class="section_header"><em>Home</em></h1>-->
-                <div>
-                    <div style="display: block; width: 100%; padding: 0px; text-align: center;">
-                        <h1 style=" margin:0; font-size: 56px; font-weight: 500; background-image: linear-gradient(45deg, rgb(43, 250, 222) 0%, rgb(231, 117, 226) 100%); -webkit-background-clip: text; color: transparent;">
-                            Hi,
-                            I'm Luís.
-                        </h1>
-                    </div>
-                    <div style="display: block; width: 100%; max-width: 600px; text-align: center; margin-left: auto; margin-right: auto;">
-                        <img id="" style="width: 100%; border-radius: 0px;" src="images/me2.jpg">
-                    </div>
+                <div id="greeting-container">
+                    <h1 id="greeting">
+                        Hi,
+                        I'm Luís.
+                    </h1>
                 </div>
-                <h5 class="header_description">
-                    Here I'll display some of my projects, both personal and professional. I've recently wanted to improve my front-end web skills and grow my knowledge about PWAs, so my latest projects will focus mainly on those two subjects.
-                </h5>
+                <div id="photo-greeting">
+                    <div id="self-photo-container">
+                        <img id="self-photo" style="width: 100%;" src="images/me2.jpg">
+                    </div>
+                    <h5 id="header_description">
+                        Here I'll display some of my projects, both personal and professional. I've recently wanted to improve my front-end web skills and grow my knowledge about PWAs, so my latest projects will focus mainly on those two subjects.
+                    </h5>
+                </div>
             </div>
 
 
             
             <div id="projects" class="section" style="width: 100%;">
-                <!--<h1 class="section_header"><em>Projects</em></h1>-->
                 <div class="cards">
                     <a href="https://lfilipemsantos.github.io/weather" target="_blank" rel="noopener noreferrer">       
                         <div id="weather_card" class="card">
@@ -183,10 +168,8 @@
             
 
             <div id="experience" class="section">
-                <!--<h1 class="section_header"><em>Experience</em></h1> -->
                 <div class="content" style="width:100%; margin-left: auto; margin-right: auto;">
                     <div class="activities">
-                        <!--<hr class="exp_divider">-->
                         <div class="activity">
                             <h2 class="activity_title">
                                 System Administrator
@@ -229,8 +212,7 @@
                                     </th>
                                 </tr>
                             </table>
-                        </div>
-                        <!--<hr class="exp_divider">-->                    
+                        </div>                   
                         <div class="activity">
                             <h2 class="activity_title">
                                 Data Scientist Intern
@@ -273,8 +255,7 @@
                                     </th>
                                 </tr>
                             </table>
-                        </div>
-                        <!--<hr class="exp_divider">-->                    
+                        </div>                   
                         <div class="activity">
                             <h2 class="activity_title">
                                 Tech Support
@@ -317,8 +298,7 @@
                                     </th>
                                 </tr>
                             </table>
-                        </div>
-                        <!--<hr class="exp_divider">-->                    
+                        </div>                  
                         <div class="activity">
                             <h2 class="activity_title">
                                 Data Engineer Intern
@@ -361,8 +341,7 @@
                                     </th>
                                 </tr>
                             </table>
-                        </div>
-                        <!--<hr class="exp_divider">-->                    
+                        </div>                   
                         <div class="activity">
                             <h2 class="activity_title">
                                 Collaborator at the Logistics Department
@@ -412,7 +391,6 @@
             
 
             <div id="education" class="section">
-                <!--<h1 class="section_header"><em>Education</em></h1> -->
                 <div class="content" style="width:100%; margin-left: auto; margin-right: auto;">
                     <div class="activities">
                         <div class="activity">
@@ -457,8 +435,7 @@
                                     </th>
                                 </tr>
                             </table>
-                        </div>
-                        <!--<hr class="exp_divider">-->                    
+                        </div>                  
                         <div class="activity">
                             <h2 class="activity_title">
                                 Licenciatura em Engenharia de Telecomunicações e Informática
@@ -508,7 +485,6 @@
             
 
             <div id="contacts" class="section">
-                <!--<h1 class="section_header"><em>Contacts</em></h1> -->
                 <div class="content" style="width:100%; margin-left: auto; margin-right: auto;">
                     <div class="outlinks">
                         <div class="links">

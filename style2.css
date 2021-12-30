@@ -2,10 +2,88 @@
     font-family: 'Biotif';
     src: url('fonts/Biotif-SemiBold.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
 }
+@font-face {
+    font-family: 'Biotif Black';
+    src: url('fonts/Biotif-Black.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
 
 ::-webkit-scrollbar {
     display: none;
 }
+
+#greeting {
+    font-family: 'Biotif Black';
+    font-size: 69px;
+    margin:0;
+    background-image: linear-gradient(45deg, rgb(43, 250, 222) 0%, rgb(231, 117, 226) 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+
+#photo-greeting {
+    display: flex;
+    flex-direction: column;
+}
+
+#greeting-container {
+    display: block; 
+    width: 100%;
+    padding: 0px;
+    text-align: center;
+}
+
+#self-photo-container {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+   
+@media (min-width: 1080px) {
+    #photo-greeting {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 40px;
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #greeting-container {
+        width: 100%;
+    }
+
+    #greeting {
+        text-align: center;
+        width: 100%;
+    }
+
+    #self-photo-container {
+        width: 50%;
+        height: 100%;
+        text-align: right;
+        margin-right: 20px;
+    }
+
+    #header_description {
+        margin: unset;
+        margin-left: 20px !important;
+        width: 50%;
+        font-size: 27px !important;
+    }
+
+    #self-photo {
+        width: 100%;
+        margin-right: 0;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
 
 #interests, #projects, #experience, #education, #contacts {
     display: none;
@@ -66,15 +144,16 @@ body {
     box-shadow: 0px 10px 30px -10px rgba(0, 0, 0, 0.4);
 }
 
-#self_photo {
-    display: block;
-    margin-top: 40px;
-    margin-left: auto;
-    margin-right: auto; 
-    width: 33%;
-    border-radius: 50%;
-    box-shadow: 3px 3px 10px rgb(3, 3, 3);
+#self-photo {
+    border-radius: 30px;
 }
+
+@media (max-width: 600px) {
+    #self-photo {
+        border-radius: 0px;
+    }
+}
+
 
 .outlinks{
     padding-top: 50px;
@@ -143,7 +222,7 @@ a {
     text-shadow: 0.5px 0.5px 1px #333333;
 }
 
-.header_description {
+#header_description {
     text-align: justify;
     font-family: 'Biotif', sans-serif;
     margin-top: 20px;
@@ -152,11 +231,11 @@ a {
     margin-bottom: 5px;
     font-weight: bolder;
     font-size: 20px;
-    max-width: 600px
+    max-width: 600px;
 }
 
 @media (max-width: 620px) {
-    .header_description {
+    #header_description {
         padding-left: 10px;
         padding-right: 10px;
     }
@@ -283,7 +362,9 @@ hr {
 }
 
 .activities {
-    width: fit-content;
+    box-sizing: border-box;
+    padding: 10px;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     display: grid;
@@ -293,13 +374,13 @@ hr {
 }
 
 
-@media (min-width: 1000px) {
+@media (min-width: 900px) {
     .activities { 
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1300px) {
     #experience > .content > .activities { 
         grid-template-columns: repeat(3, 1fr);
     }
@@ -307,9 +388,11 @@ hr {
 
 
 .activity {
+    box-sizing: border-box;
+    min-width: 0;
     margin-left: auto;
     margin-right: auto;
-    /*margin-bottom: 45px;*/
+    /* margin-bottom: 45px; */
     border-radius: 15px;
     width: 100%;
     max-width: 400px;
