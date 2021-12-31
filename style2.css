@@ -117,14 +117,6 @@
     text-align: center;
 }
 
-.bodymovinanim {
-    display: none;
-    width: 90%;
-    max-width: 50px;
-    margin-bottom: 30px;
-    cursor: pointer;
-    padding: 2%;
-  }
 
 #position {
     text-align: center;
