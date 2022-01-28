@@ -430,7 +430,7 @@ hr {
     height: 400px;
     padding-top: 15px;
     padding-bottom: 15px;
-    width: 300px;
+    width: 350px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -448,7 +448,7 @@ hr {
     padding-left: 0;
     padding-bottom: 0;
     height: 400px;
-    width: 300px;
+    width: 350px;
     border-radius: 15px;
     position: relative;
     transition: all 0.2s ease-in-out;
@@ -462,7 +462,7 @@ hr {
     left: -5px;*/
     background-color: white;
     background-image: linear-gradient(45deg, rgba(186,255,246,1) 0%, rgba(196,240,246,1) 21%, rgba(238,213,174,1) 78%, rgba(255,208,229,1) 100%);
-    width: 310px;
+    width: 360px;
     height: 410px;
     top: -5px;
     left: -5px;
@@ -562,7 +562,7 @@ hr {
 }
 
 
-@media (min-width: 735px) {
+@media (min-width: 785px) {
     .cards { 
         grid-template-columns: repeat(2, auto); 
         margin-left: 0px;
@@ -572,7 +572,7 @@ hr {
     }
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 1150px) {
     .cards { 
         grid-template-columns: repeat(3, 1fr); 
         margin-left: 150px auto;
