@@ -12,6 +12,7 @@
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.3/lottie_svg.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript" async src="https://cdn.credly.com/assets/utilities/embed.js"></script>
     </head>
 
     <body>
@@ -30,57 +31,144 @@
                     <div class="tab_links" onclick="switchMain('education')">
                         <p class="link">Education</p>
                     </div>
-                    <div class="tab_links" onclick="switchMain('contacts')">
-                        <p class="link">Contacts</p>
-                    </div>
                 </div>
             </div>
         </div>
        
 
         <div class="main">
-            <div id="home" class="section" style="width: 100%;">
-                <svg style="position: absolute; z-index:-3000; transform: scale(0.5); top:-40%; left: -40%" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
-                    <defs>
+            <div id="home" class="section">
+                <div id="profile">
+                    <!--<svg style="position: absolute; z-index:-3000; transform: scale(0.5); top:-40%; left: -40%" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
+                        <defs>
+                            <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" style="stop-color: rgb(76, 161, 175);"></stop>
+                            <stop offset="100%" style="stop-color: rgb(196, 224, 229);"></stop>
+                            </linearGradient>
+                        </defs>
+                        <path id="blob" d="M367.5,316Q326,382,236,406Q146,430,98,340Q50,250,102,167Q154,84,258,70.5Q362,57,385.5,153.5Q409,250,367.5,316Z" fill="none" stroke-width="4px" stroke="url(#gradient)"></path>
+                    </svg>
+                    <svg style="position: fixed; z-index:-3000; transform: scale(0.5); top:-80%; right:-50%" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
+                        <defs>
                         <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                        <stop offset="0%" style="stop-color: rgb(76, 161, 175);"></stop>
-                        <stop offset="100%" style="stop-color: rgb(196, 224, 229);"></stop>
+                            <stop offset="0%" style="stop-color: rgb(255, 95, 109);"></stop>
+                            <stop offset="100%" style="stop-color: rgb(255, 195, 113);"></stop>
                         </linearGradient>
-                    </defs>
-                    <path id="blob" d="M367.5,316Q326,382,236,406Q146,430,98,340Q50,250,102,167Q154,84,258,70.5Q362,57,385.5,153.5Q409,250,367.5,316Z" fill="none" stroke-width="4px" stroke="url(#gradient)"></path>
-                </svg>
-                <svg style="position: fixed; z-index:-3000; transform: scale(0.5); top:-80%; right:-50%" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
-                    <defs>
-                    <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                        <stop offset="0%" style="stop-color: rgb(255, 95, 109);"></stop>
-                        <stop offset="100%" style="stop-color: rgb(255, 195, 113);"></stop>
-                    </linearGradient>
-                    </defs>
-                    <path id="blob" d="M417,289.5Q372,329,347.5,370Q323,411,275.5,408.5Q228,406,184.5,391Q141,376,105.5,339.5Q70,303,89.5,256Q109,209,121,162Q133,115,177.5,83.5Q222,52,282,50.5Q342,49,358.5,109.5Q375,170,418.5,210Q462,250,417,289.5Z" fill="none" stroke-width="4px" stroke="url(#gradient)"></path>
-                </svg>
-                <div id="greeting-container">
-                    <h1 id="greeting">
-                        Luís Santos
-                    </h1>
-                    <h2 id="sub-greeting">
-                        Linux System Administrator
-                    </h2>
-
-                </div>
-                <div id="photo-greeting">
-                    <div id="self-photo-container">
-                        <img id="self-photo" src="images/me2.jpg">
+                        </defs>
+                        <path id="blob" d="M417,289.5Q372,329,347.5,370Q323,411,275.5,408.5Q228,406,184.5,391Q141,376,105.5,339.5Q70,303,89.5,256Q109,209,121,162Q133,115,177.5,83.5Q222,52,282,50.5Q342,49,358.5,109.5Q375,170,418.5,210Q462,250,417,289.5Z" fill="none" stroke-width="4px" stroke="url(#gradient)"></path>
+                    </svg>-->
+                    
+                    <div id="photo-greeting">
+                        <div id="self-photo-container">
+                            <img id="self-photo" src="images/me2.jpg">
+                        </div>
                     </div>
-                    <h5 id="header_description">
-                        Here I'll display some of my projects, both personal and professional. Currently, I'm a Linux System Administrator at ITnow and president at Centro Social Cultural Recreativo e Desportivo do Carvalhal.
-                    </h5>
+                    <div id="greeting-container">
+                        <h1 id="name">
+                            Luís Santos
+                        </h1>
+                        <div id="email"><a href = "mailto: lfilipemsantos@outlook.com">lfilipemsantos@outlook.com</a></div>
+                        <h2 id="job">
+                            Linux System Administrator
+                        </h2>
+                    </div>
                 </div>
-                <h5 style="max-width: 40ch; text-align: justify; font-size: 1.3rem; margin: auto; padding: 0 10px;">
-                    On my free time I discover new places with my bike, I read, and I'm a Touch Rugby player for RCT.
-                    I've recently wanted to improve my front-end web skills and grow my knowledge about PWAs, so my latest projects will focus mainly on those two subjects.
-                </h5>
+                <div id="description">
+                    <div class="banner">
+                        <div class="banner-title">
+                            Biography
+                        </div>
+                    </div>
+                    <div style="text-align: justify; margin: auto; padding: 20px 20px;">
+                        I'm a Linux System Administrator at ITnow and president at Centro Social Cultural Recreativo e Desportivo do Carvalhal.
+                        On my free time I discover new places with my bike, I read, and I'm a Touch Football player at Rugby Clube de Tondela.
+                    </div>
+                </div>
+                <div id="projects_card">
+                    <div class="banner">
+                        <div class="banner-title">
+                            Projects
+                        </div>
+                    </div>
+                    <div>
+                    </div>
+                </div>   
+                <div id="socials_card">
+                    <div class="banner">
+                        <div class="banner-title">
+                            Social media
+                        </div>
+                    </div>                
+                    <div class="content" style="width:100%; margin-left: auto; margin-right: auto;">
+                        <div class="outlinks">
+                            <div class="links">
+                                <a class="links_text" target="_blank" href="https://github.com/lfilipemsantos">Github</a>
+                                <a class="links_icon" target="_blank" href="https://github.com/lfilipemsantos">
+                                    <i class="fa fa-github"></i>
+                                </a>
+                            </div>
+                            <div class="links">
+                                <a class="links_text" target="_blank" href="https://linkedin.com/in/lfilipemsantos">Linkedin</a>
+                                <a class="links_icon" target="_blank" href="https://linkedin.com/in/lfilipemsantos">
+                                    <i class="fa fa-linkedin"></i>
+                                </a>
+                            </div>
+                            <div class="links">
+                                <a class="links_text" target="_blank" href="https://instagram.com/lfilipemsantos">Instagram</a>
+                                <a class="links_icon" target="_blank" href="https://instagram.com/lfilipemsantos">
+                                    <i class="fa fa-instagram"></i>
+                                </a>
+                            </div>
+                            <div class="links">
+                                <a class="links_text" target="_blank" href="https://twitter.com/lfilipemsantos">Twitter</a>
+                                <a class="links_icon" target="_blank" href="https://twitter.com/lfilipemsantos">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+               
+                    </div>   
+                </div>   
+                <div id="certifications_card">
+                    <div class="banner" style="display: flex; flex-direction: row;">
+                        <i class="fa fa-pen" style="color: black; font-size:10px; width: 10px;"></i>
+                        <div class="banner-title">
+                            Badges
+                        </div>
+                    </div>
+                    <div>
+                        <div id="certifications-grid">
+                            <div style="display: flex; flex-direction: row;">
+                                <div>
+                                    <a href="https://www.credly.com/badges/5b1e648a-8fcd-411c-93cb-6a220acb91a1/public_url" target="_blank"><img src="images/SREV2.png" style="width:50px;height:50px;margin-right: 10px;"></a>
+                                </div>
+                                <div>
+                                    <div style="font-size: 14px;">IBM Certified Professional SRE - Cloud v2</div>
+                                    <div style="font-size: 10px; opacity: 0.8;">28/11/2022</div>
+                                </div>
+                            </div>
+                            <div style="display: flex; flex-direction: row;">
+                                <div>
+                                    <a href="https://www.credly.com/badges/ddd38612-aab2-4387-b308-e229f7b3950b/public_url" target="_blank"><img src="images/SREessentials.png" style="width:50px;height:50px;margin-right: 10px;"></a>
+                                </div>
+                                <div>
+                                    <div style="font-size: 14px;">IBM Cloud Professional SRE Essentials</div>
+                                    <div style="font-size: 10px; opacity: 0.8;">16/11/2022</div>
+                                </div>
+                            </div>
+                            <div style="display: flex; flex-direction: row;">
+                                <div>
+                                    <a href="https://www.credly.com/badges/8dc4288c-c67f-410e-bf45-7d842bb17657/public_url" target="_blank"><img src="images/Applied_DS.png" style="width:50px;height:50px;margin-right: 10px;"></a>
+                                </div>
+                                <div>
+                                    <div style="font-size: 14px;">Applied Data Science with Python - Level 2</div>
+                                    <div style="font-size: 10px; opacity: 0.8;">08/01/2021</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>     
+                </div>
             </div>
-
 
             
             <div id="projects" class="section" style="width: 100%;">
@@ -532,55 +620,9 @@
                     </div>       
                 </div>   
             </div>
-            
-
-            <div id="contacts" class="section">
-                <div class="content" style="width:100%; margin-left: auto; margin-right: auto;">
-                    <div class="outlinks">
-                        <div class="links">
-                            <a class="links_text" target="_blank" href="https://github.com/lfilipemsantos">Github</a>
-                            <a class="links_icon" target="_blank" href="https://github.com/lfilipemsantos">
-                                <i class="fa fa-github"></i>
-                            </a>
-                        </div>
-                        <div class="links">
-                            <a class="links_text" target="_blank" href="https://linkedin.com/in/lfilipemsantos">Linkedin</a>
-                            <a class="links_icon" target="_blank" href="https://linkedin.com/in/lfilipemsantos">
-                                <i class="fa fa-linkedin"></i>
-                            </a>
-                        </div>
-                        <div class="links">
-                            <a class="links_text" target="_blank" href="https://instagram.com/lfilipemsantos">Instagram</a>
-                            <a class="links_icon" target="_blank" href="https://instagram.com/lfilipemsantos">
-                                <i class="fa fa-instagram"></i>
-                            </a>
-                        </div>
-                        <div class="links">
-                            <a class="links_text" target="_blank" href="https://twitter.com/lfilipemsantos">Twitter</a>
-                            <a class="links_icon" target="_blank" href="https://twitter.com/lfilipemsantos">
-                                <i class="fa fa-twitter"></i>
-                            </a>
-                        </div>
-                    </div>
-           
-                </div>   
-            </div>
-
         </div>
 
-        <script>
-            function showMenu() { 
-                var x = document.querySelectorAll(".tab_links, .outlinks, .tab_dividers")
-                for (i=0; i<x.length; i++) {
-                    if (x[i].style.display === "block") {
-                        x[i].style.display = "none";
-                    } else {
-                        x[i].style.display = "block";
-                    }
-                }
-            }
-        </script>
-        <script>
+        <!--<script>
             window.addEventListener('resize', function(event){
                 let newWidth = window.innerWidth;
                 var x = document.querySelectorAll("")
@@ -596,16 +638,21 @@
                 }
                 
             });
-        </script>
+        </script>-->
 
         <script>
             function switchMain(id) {
                 console.log("id:" + id)
-                var main = ["home", "projects", "experience", "education", "contacts"];
+                var main = ["home", "projects", "experience", "education"];
                 for (let i = 0; i < main.length; i++) {
                     document.getElementById(main[i]).style.display = "none";
                 }
-                document.getElementById(id).style.display = "block";
+                if (id=="home") {
+                    document.getElementById(id).style.display = "grid";
+                }
+                else {
+                    document.getElementById(id).style.display = "block";
+                }
             }
         </script>
 
@@ -613,7 +660,6 @@
             var prevScrollpos = window.pageYOffset;
             window.onscroll = function() {
                 var currentScrollPos = window.pageYOffset;
-                console.log(prevScrollpos);
                 if (prevScrollpos > currentScrollPos || prevScrollpos < 100) {
                     document.getElementById("sidebar").style.top = "0";
                 } 
@@ -621,10 +667,7 @@
                     document.getElementById("sidebar").style.top = "-148px";
                 }
                 prevScrollpos = currentScrollPos;
-            }
-
-                
+            }                
         </script>
-        
     </body>
 </html>
