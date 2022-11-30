@@ -74,7 +74,7 @@ body {
 
 #sidebar {
     background-color: rgba(37,38,40,.21);
-    background-image: radial-gradient(circle at 25%,hsla(0,0%,100%,.2),rgba(50,50,50,.2) 80%);
+    background-image: radial-gradient(circle at 25%,rgba(255, 255, 255, 0.563),rgba(112, 112, 112, 0.2) 80%);
     -webkit-backdrop-filter: blur(14px);
     backdrop-filter: blur(14px);
     width:100%;
@@ -262,13 +262,14 @@ body {
 
 
 .outlinks{
-    padding-top: 20px;
+    margin-top: 20px;
     width: max-content;
     display: grid;
-    grid-gap: 30px;
+    grid-gap: 10px;
     grid-template-rows: repeat(2, 100px);
     grid-template-columns: repeat(2, 100px);
     justify-items: center;
+    justify-self: center;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
@@ -352,12 +353,19 @@ a:hover {
     margin-top: 0;
 }
 
-.links:hover .links_text, .links:hover .links_icon {
-    color: rgb(103, 177, 190); 
-}
-
 .links_icon:hover {
     cursor: pointer;
+}
+
+.links_icon > img {
+    height: 50px;
+    width: 50px;
+    border-radius: 14px;
+    transition: 2ms ease-in-out;
+}
+
+.links_icon > img {
+    transform: scale(1.1);
 }
 
 .tab_links {
