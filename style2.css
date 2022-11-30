@@ -130,12 +130,22 @@ body {
 .certification, .publication {
     display: flex;
     flex-direction: row;
+    padding: 5px 10px;
+    border-radius: 7px;
+}
+
+.certification:hover, .publication:hover {
+    cursor: pointer;
+    background-color: rgba(226, 226, 226, 0.3);
 }
 
 .certification-title, .publication-title{
-    width: 230px;
+    width: 200px;
     font-size: 14px;
-    padding-top: 3px;
+    padding-top: 12px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow:ellipsis;
 }
 
 .certification-date, .publication-date {
@@ -146,7 +156,7 @@ body {
 #certifications-grid, #publications-grid {
     width: 289px;
     height: 100%;
-    padding: 10px;
+    padding: 15px 5px;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
