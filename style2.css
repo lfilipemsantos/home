@@ -227,7 +227,7 @@ body {
     #projects-grid > * {
         align-self: start;
         flex: none;
-        height: 80dvh;
+        height: 500px;
         justify-self: start;
         position: relative;
         width: 100%;
@@ -244,6 +244,10 @@ body {
 
 #projects-grid>*:nth-child(2) {
     background-image: url("./images/rotas_img.png");
+}
+
+#projects-grid>*:nth-child(3) {
+    background-image: url("./images/encomendas_img.png");
 }
 
 .project-details {
