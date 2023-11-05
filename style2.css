@@ -181,7 +181,6 @@ body {
 }
 
 #educations {
-    border-radius: 0 0 16px 16px;
 }
 
 .certification, .publication, .education, .project, .book {
@@ -217,11 +216,15 @@ body {
 
 }
 
+#projects_card {
+    background-color: #fff;
+}
+
 #projects-grid {
     grid-template-columns: repeat(1,minmax(200px,1fr));
     grid-template-rows: repeat(2, 1fr);
     width: 100%;
-    gap: 8px;
+    gap: 1rem;
 }
 
 #projects-grid > * {
@@ -236,7 +239,7 @@ body {
     background-size: cover;
     background-position: center;
     padding: 20px;
-    border: 1px solid white;
+    border: 1px solid black;
 }
 
 @media (min-width: 809px) {
@@ -275,7 +278,7 @@ body {
     position: absolute;
     -webkit-backdrop-filter: blur(30px);
     backdrop-filter: blur(30px);
-    color: #fff;
+    color: #000;
     border-radius: 12px;
     height: 80px;
     box-sizing: border-box;
@@ -314,13 +317,8 @@ body {
 .banner {
     display: flex;
     flex-direction: row;
-    height: 80px;
+    height: 70px;
     font-size: 21px;
-    /*background: radial-gradient(circle at 100% 0,hsla(0,0%,100%,.85) 0,rgba(243, 242, 242, 0.604) 183%);*/
-    background-color: var(--clr-background);
-    -webkit-backdrop-filter: blur(15px) saturate(86%);
-    backdrop-filter: blur(15px) saturate(86%);
-    border-radius: 40px 40px 0 0;
     padding-top: 12px;
     padding-left: 0px;
     text-align: center;
@@ -328,7 +326,7 @@ body {
 }
 
 .banner-title {
-    color: var(--clr-text);
+    color: white;
     vertical-align: middle;
     height: 55px;
     font-size: 26px;
@@ -337,6 +335,10 @@ body {
     border-radius: 7px;
     line-height: 38px;
     margin: 0 10px;
+}
+
+#projects_card > .banner > .banner-title{
+    color: #000;
 }
 
 /*
