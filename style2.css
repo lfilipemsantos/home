@@ -183,7 +183,58 @@ body {
 #educations {
 }
 
-.certification, .publication, .education, .project, .book {
+#publications-grid {
+    display: grid;
+    width: 100%;
+    gap: 1rem;
+}
+
+.publication {
+    display: flex;
+    flex-direction: column;
+    min-height: 200px;
+    width: 100%;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.publication > div {
+    height: 100%;
+}
+
+.publication-title {
+    font-weight: 800;
+    text-align: center;
+    padding: 0px 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; 
+    -webkit-box-orient: vertical;
+}
+
+.publication-date {
+    width: 100%;
+    text-align: center;
+}
+
+.publication-link {
+    background-color: #000;
+    border-radius: 20px;
+    border: 1px solid white;
+    color: white;
+    font-weight: 300;
+    font-family: 'Poppins', sans-serif;
+    width: 9rem;
+    padding: 10px 12px;
+    border-radius: 40px;
+    margin-top: 20px;
+    border: 1px solid white;
+    bottom: 0;
+}
+
+.certification, .education, .project, .book {
     display: flex;
     flex-direction: row;
     padding: 5px 10px;
@@ -191,7 +242,7 @@ body {
     box-sizing: border-box;
 }
 
-.certification-title, .publication-title, .education-title, .project-title, .book-title {
+.certification-title, .education-title, .project-title, .book-title {
     width: 200px;
     font-size: 14px;
     padding-top: 15px;
@@ -205,7 +256,7 @@ body {
     opacity: 0.8;
 }
 
-#certifications-grid, #publications-grid, #educations-grid, #projects-grid, #books-grid {
+#certifications-grid, #educations-grid, #projects-grid, #books-grid {
     width: 289px;
     height: 100%;
     padding: 15px 5px;
@@ -299,7 +350,7 @@ body {
     padding-top: 0;
 }
 
-#certifications-grid > *, #publications-grid > *, #educations-grid > *, #books-grid > * {
+#certifications-grid > *, #educations-grid > *, #books-grid > * {
     height: 60px;
     width: 275px;
     padding: 5px 10px;
