@@ -17,6 +17,7 @@
 
 * {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 html {
@@ -36,7 +37,6 @@ body {
     font-size: 1rem;
     width: 100%;
     overflow-x: hidden;
-    scroll-behavior: smooth;
 }
 
 #footer {
@@ -259,7 +259,7 @@ body {
 #certifications-grid, #educations-grid, #projects-grid, #books-grid {
     width: 289px;
     height: 100%;
-    padding: 15px 5px;
+    padding: 15px 0px;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -496,7 +496,6 @@ body {
     height: 180px;
     width: 180px;
     object-fit: cover;
-    box-shadow: 0px 0px 20px 2px #1021363f;
 }
 
 
