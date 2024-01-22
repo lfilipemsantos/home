@@ -22,7 +22,7 @@
     --clr-container-on-background: #ffffff;
     --clr-text: #cbcbcb;
     --clr-primary: hsl(96, 46%, 68%);
-    --clr-footer: #0c4362
+    --clr-footer: #007947;
 }
 
 * {
@@ -70,7 +70,7 @@ body {
 }
 
 #footer {
-    background-color: var(--clr-container-on-background);
+    background-color: var(--clr-footer);
     color: var(--clr-text);
     position: sticky;
     bottom: 0;
@@ -239,14 +239,30 @@ body {
     gap: 1rem;
 }
 
+#publications-grid {
+    grid-template-columns: repeat(1,minmax(200px,1fr));
+    width: 100%;
+    max-width: 2000px;
+    gap: 1rem;
+    box-sizing: border-box;
+}
+
+@media (min-width: 750px) {
+    #publications-grid {
+        grid-template-columns: repeat(2,minmax(200px,1fr));
+    }
+}
+
 .publication {
     display: flex;
     flex-direction: column;
     min-height: 200px;
     width: 100%;
-    border: 1px solid white;
+    border: 5px solid #007947;
     border-radius: 20px;
     padding: 20px;
+    color: black;
+    background-color: white;
 }
 
 .publication > div {
@@ -282,6 +298,7 @@ body {
     margin-top: 20px;
     border: 1px solid white;
     bottom: 0;
+    cursor: pointer;
 }
 
 .certification, .education, .book {
@@ -306,7 +323,7 @@ body {
     opacity: 0.8;
 }
 
-#certifications-grid, #educations-grid, #projects-grid, #books-grid {
+#certifications-grid, #educations-grid, #books-grid {
     width: 289px;
     height: 100%;
     padding: 15px 0px;
@@ -319,10 +336,14 @@ body {
 
 
 #projects-grid {
+    display: grid;
     grid-template-columns: repeat(1,minmax(200px,1fr));
+    grid-template-rows: repeat(3, 1fr);
     width: 100%;
     max-width: 2000px;
     gap: 1rem;
+    margin: auto;
+    padding: 15px 0px;
     box-sizing: border-box;
 }
 
@@ -341,6 +362,7 @@ body {
 @media (min-width: 750px) {
     #projects-grid {
         grid-template-columns: repeat(2,minmax(200px,1fr));
+        grid-template-rows: repeat(2, 1fr);
     }
 }
 @media (min-width: 1000px) {
