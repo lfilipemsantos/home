@@ -209,15 +209,21 @@ body {
     display: flex;
     flex-direction: row;
     gap: 40px;
-    width: max-content;
+    width: fit-content;
     max-width: 2000px;
     align-items: flex-start;
     font-family: 'Forum', sans-serif;
     font-size: 26px;
     color: black;
-    padding: 30px 10%;
     margin: auto;
-    margin-top: 100px;
+    margin-top: 50px;
+}
+
+
+@media (max-width: 750px) {
+    #description {
+        flex-direction: column;
+    }
 }
 
 .profile_image > img {
