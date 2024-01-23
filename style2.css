@@ -157,6 +157,7 @@ body {
     width: 100%;
     margin-bottom: 100px !important;
     padding: 0px 20px;
+    scroll-margin-top: 150px;
 }
 
 #profile {
@@ -200,16 +201,17 @@ body {
 #publications-grid {
     display: grid;
     width: 100%;
-    gap: 1rem;
-}
-
-#publications-grid {
+    gap: 1rem;    
     grid-template-columns: repeat(1,minmax(200px,1fr));
     width: fit-content;
     max-width: 2000px;
     margin: auto;
-    gap: 1rem;
+    padding: 15px 0px;
     box-sizing: border-box;
+}
+
+#publications-grid {
+
 }
 
 @media (min-width: 750px) {
@@ -432,7 +434,7 @@ body {
 }
 
 .banner-title {
-    font-size: 4vmax;
+    font-size: 60px;
     font-family: 'Chunk Black', sans-serif;
     color: white;
     vertical-align: middle;
@@ -657,6 +659,7 @@ header {
     height: 100%;
     display: flex;
     align-items: center;
+    cursor: pointer;
   }
   
 .nav-toggle-label span,
@@ -674,6 +677,7 @@ header {
 .nav-toggle-label span::after {
     content: '';
     position: absolute;
+    transition:0.5s;
 }
   
 .nav-toggle-label span::before {
@@ -752,6 +756,23 @@ nav a {
     opacity: 1;
     transition: opacity 250ms ease-in-out 250ms;
 }
+
+.nav-toggle:checked ~ .nav-toggle-label span {
+    background:rgba(0,0,0,0);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0);
+  }
+  
+  .nav-toggle:checked ~ .nav-toggle-label span:before {
+    top: 0;
+    transform:rotate(135deg);
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .nav-toggle:checked ~ .nav-toggle-label span:after {
+    top: 0;
+    transform:rotate(225deg);
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+  }
   
 @media screen and (min-width: 950px) {
     .nav-toggle-label {
