@@ -15,10 +15,12 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script type="text/javascript" async src="https://cdn.credly.com/assets/utilities/embed.js"></script>
     </head>
-
     <body>
-        <div id="sidebar">
-                <div id="tabs_container">
+        <header>
+            <h1 class="logo">Luis Santos</h1>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <nav>
+                <ul>
                     <!--<div class="tab_links" onclick="switchMain('home')">
                         <img src="logo.png" style="height: 40px;">
                     </div>
@@ -34,21 +36,24 @@
                     <div class="tab_links" onclick="switchMain('education')">
                         <p class="link">Education</p>
                     </div>-->
-                    <div class="tab_links" onclick="window.location='#profile';">
-                        <p class="link">Home</p>
-                    </div>
-                    <div class="tab_links" onclick="window.location='#projects_card';">
-                        <p class="link">Projects</p>
-                    </div>
-                    <div class="tab_links" onclick="window.location='#experience';">
-                        <p class="link">Experience</p>
-                    </div>
-                    <div class="tab_links" onclick="window.location='#educations';">
-                        <p class="link">Education</p>
-                    </div>
-                </div>
-
-        </div>
+                    <li>
+                        <a onclick="window.location='#home';uncheck()">Home</a>
+                    </li>
+                    <li>
+                        <a onclick="window.location='#projects_card';uncheck()">Projects</a>
+                    </li>
+                    <li>
+                        <a onclick="window.location='#publications';uncheck()">Publications</a>
+                    </li>
+                    <li>
+                        <a onclick="window.location='#educations';uncheck()">Education</a>
+                    </li>
+                </ul>
+            </nav>
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span>
+            </label>
+        </header>
         <div class="main">
             <div id="home" class="section">
                 <!--<div class="hero_section">
@@ -804,6 +809,10 @@
                 else {
                     document.getElementById(id).style.display = "block";
                 }
+            }
+
+            function uncheck() {
+                document.getElementById('nav-toggle').checked = false;
             }
         </script>
 

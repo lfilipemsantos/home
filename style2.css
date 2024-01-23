@@ -25,7 +25,7 @@
     --clr-footer: #007947;
 }
 
-* {
+*, *::before, *::after {
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
@@ -49,6 +49,7 @@ body {
     overflow-x: hidden;
     width: 100%;
 }
+
 
 .hero_section {
     background-color: #007947 !important;
@@ -117,26 +118,6 @@ body {
     text-decoration: underline;
 }
 
-#job {
-    margin: 0;
-    font-size: 14px;
-    font-weight: lighter;
-    color: var(--clr-text);
-}
-
-#photo-greeting {
-    display: flex;
-    flex-direction: column;
-}
-
-#greeting-container {
-    display: block; 
-    width: 100%;
-    padding: 0px;
-    text-align: center;
-    margin-top: 10px;
-}
-
 #self-photo-container {
     display: block;
     text-align: center;
@@ -148,20 +129,6 @@ body {
 #interests, #projects, #experience, #education, #contacts {
     display: none;
     height: auto;
-}
-
-#sidebar {
-    background-color: #007947;
-    color: #FDF9E6 !important;
-    width:100%;
-    height: 90px;
-    overflow: hidden;
-    display: inline-block;
-    transition: all 0.3s ease-in-out;
-    position: fixed;
-    z-index: 1000;
-    top: 0;
-    box-sizing: border-box;
 }
 
 .section_divider {
@@ -228,9 +195,6 @@ body {
 
 .profile_image > img {
     box-shadow: 5px 5px 0px 0px #007947;
-}
-
-#educations {
 }
 
 #publications-grid {
@@ -515,10 +479,6 @@ body {
     margin-right: auto;
 }
 
-.tab_dividers{
-    display: none;
-}
-
 
 .projectBox {
     box-sizing: border-box;
@@ -662,13 +622,178 @@ a:hover {
     letter-spacing: 1.5px;
 }
 
-#tabs_container {
-    display: inline-block;
-    width: max-content;
-    margin-right: 40px;
-    height: 100%;
-    overflow-x:scroll;
+.logo {
+    font-family: 'Chunk Black', sans-serif;
+    color: white;
+    font-size: 6.5vw;
 }
+
+header {
+    background: #007947;
+    text-align: center;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 90px;
+  }
+  
+  /* changed this from the tutorial video to
+     allow it to gain focus, making it tabbable */
+  .nav-toggle {
+    position: absolute !important;
+    top: -9999px !important;
+    left: -9999px !important;
+  }
+  
+  .nav-toggle:focus ~ .nav-toggle-label {
+    outline: 3px solid rgba(lightblue, .75);
+  }
+  
+  .nav-toggle-label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 1.5em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-toggle-label span,
+  .nav-toggle-label span::before,
+  .nav-toggle-label span::after {
+    display: block;
+    background: white;
+    height: 3px;
+    width: 2em;
+    border-radius: 2px;
+    position: relative;
+  }
+  
+  .nav-toggle-label span::before,
+  .nav-toggle-label span::after {
+    content: '';
+    position: absolute;
+  }
+  
+  .nav-toggle-label span::before {
+    bottom: 7px;
+  }
+  
+  .nav-toggle-label span::after {
+    top: 7px;
+  }
+  
+  nav {
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    left: 0;
+    height: 100vh;
+    background: #007947;
+    width: 100%;
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
+  }
+  
+  nav ul {
+    margin: 0;
+    margin-top: 50%;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+  }
+  
+  nav li {
+    margin-bottom: 30px;
+  }
+  
+  nav a {
+    font-size: 8vw !important;
+    font-family: 'Chunk Black', sans-serif;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+  }
+  
+  nav a:hover {
+    color: #000;
+  }
+  
+  .nav-toggle:checked ~ nav {
+    transform: scale(1,1);
+  }
+  
+  .nav-toggle:checked ~ nav a {
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 250ms;
+  }
+  
+  @media screen and (min-width: 800px) {
+    .nav-toggle-label {
+      display: none;
+    }
+  
+    header {
+      display: grid;
+      grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+    }
+    
+    .logo {
+      grid-column: 2 / 3;
+    }
+    
+    nav {
+      position: relative;
+      text-align: left;
+      transition: none;
+      transform: scale(1,1);
+      background: none;
+      top: initial;
+      left: initial;
+      
+      grid-column: 3 / 4;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    
+    nav ul {
+      display: flex;
+    }
+    
+    nav li {
+      margin-left: 3em;
+      margin-bottom: 0;
+    }
+    
+    nav a {
+      opacity: 1;
+      position: relative;
+    }
+    
+    nav a::before {
+      content: '';
+      display: block;
+      height: 5px;
+      background: black;
+      position: absolute;
+      top: -.75em;
+      left: 0;
+      right: 0;
+      transform: scale(0, 1);
+      transition: transform ease-in-out 250ms;
+    }
+    
+    nav a:hover::before {
+      transform: scale(1,1);
+    }
+  }
+
 
 .section_header {
     text-align: center;
