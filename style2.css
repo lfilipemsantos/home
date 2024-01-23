@@ -625,7 +625,7 @@ a:hover {
 .logo {
     font-family: 'Chunk Black', sans-serif;
     color: white;
-    font-size: 6.5vw;
+    font-size: 40px;
 }
 
 header {
@@ -635,21 +635,19 @@ header {
     z-index: 999;
     width: 100%;
     height: 90px;
-  }
+}
   
-  /* changed this from the tutorial video to
-     allow it to gain focus, making it tabbable */
-  .nav-toggle {
+.nav-toggle {
     position: absolute !important;
     top: -9999px !important;
     left: -9999px !important;
-  }
+}
   
-  .nav-toggle:focus ~ .nav-toggle-label {
+.nav-toggle:focus ~ .nav-toggle-label {
     outline: 3px solid rgba(lightblue, .75);
-  }
+}
   
-  .nav-toggle-label {
+.nav-toggle-label {
     position: absolute;
     top: 0;
     right: 0;
@@ -659,9 +657,9 @@ header {
     align-items: center;
   }
   
-  .nav-toggle-label span,
-  .nav-toggle-label span::before,
-  .nav-toggle-label span::after {
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
     display: block;
     background: white;
     height: 3px;
@@ -670,21 +668,21 @@ header {
     position: relative;
   }
   
-  .nav-toggle-label span::before,
-  .nav-toggle-label span::after {
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
     content: '';
     position: absolute;
-  }
+}
   
-  .nav-toggle-label span::before {
+.nav-toggle-label span::before {
     bottom: 7px;
-  }
+}
   
-  .nav-toggle-label span::after {
+.nav-toggle-label span::after {
     top: 7px;
-  }
+}
   
-  nav {
+nav {
     position: absolute;
     text-align: left;
     top: 100%;
@@ -697,19 +695,43 @@ header {
     transition: transform 400ms ease-in-out;
   }
   
-  nav ul {
+nav ul {
     margin: 0;
     margin-top: 50%;
     padding: 0;
     list-style: none;
     text-align: center;
-  }
+}
+
+nav a::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -7px;
+    border-radius: 3px;
+    z-index: 999;
+    background-color: #FDF9E6;
+    opacity: 0;
+    transform: translate3d(0,5px,0);
+    transition: all 0.5s cubic-bezier(.175,.885,.32,1.275);
+}
+
+nav li:hover {
+    cursor: pointer;
+}
+
+nav li:hover a::before {
+    opacity: 1;
+    transform: translateZ(0) scale3d(1.1,1.1,1.1) rotate(0deg);
+}
   
-  nav li {
+nav li {
     margin-bottom: 30px;
-  }
+}
   
-  nav a {
+nav a {
     font-size: 8vw !important;
     font-family: 'Chunk Black', sans-serif;
     color: white;
@@ -718,22 +740,18 @@ header {
     text-transform: uppercase;
     opacity: 0;
     transition: opacity 150ms ease-in-out;
-  }
+}
   
-  nav a:hover {
-    color: #000;
-  }
-  
-  .nav-toggle:checked ~ nav {
+.nav-toggle:checked ~ nav {
     transform: scale(1,1);
-  }
+}
   
-  .nav-toggle:checked ~ nav a {
+.nav-toggle:checked ~ nav a {
     opacity: 1;
     transition: opacity 250ms ease-in-out 250ms;
-  }
+}
   
-  @media screen and (min-width: 800px) {
+@media screen and (min-width: 950px) {
     .nav-toggle-label {
       display: none;
     }
@@ -748,51 +766,37 @@ header {
     }
     
     nav {
-      position: relative;
-      text-align: left;
-      transition: none;
-      transform: scale(1,1);
-      background: none;
-      top: initial;
-      left: initial;
-      
-      grid-column: 3 / 4;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
+        height: unset;
+        position: relative;
+        text-align: left;
+        transition: none;
+        transform: scale(1,1);
+        background: none;
+        top: initial;
+        left: initial;
+        
+        grid-column: 3 / 4;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
     }
     
     nav ul {
-      display: flex;
+        margin-top: unset;
+        display: flex;
     }
     
     nav li {
-      margin-left: 3em;
-      margin-bottom: 0;
+        margin-left: 3em;
+        margin-bottom: 0;
     }
     
     nav a {
-      opacity: 1;
-      position: relative;
+        font-size: 20px !important;
+        opacity: 1;
+        position: relative;
     }
-    
-    nav a::before {
-      content: '';
-      display: block;
-      height: 5px;
-      background: black;
-      position: absolute;
-      top: -.75em;
-      left: 0;
-      right: 0;
-      transform: scale(0, 1);
-      transition: transform ease-in-out 250ms;
-    }
-    
-    nav a:hover::before {
-      transform: scale(1,1);
-    }
-  }
+}
 
 
 .section_header {
