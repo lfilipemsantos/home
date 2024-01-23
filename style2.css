@@ -626,6 +626,8 @@ a:hover {
     font-family: 'Chunk Black', sans-serif;
     color: white;
     font-size: 40px;
+    text-align: left;
+    margin-left: 0.5em;
 }
 
 header {
@@ -662,7 +664,7 @@ header {
 .nav-toggle-label span::after {
     display: block;
     background: white;
-    height: 3px;
+    height: 5px;
     width: 2em;
     border-radius: 2px;
     position: relative;
@@ -675,11 +677,11 @@ header {
 }
   
 .nav-toggle-label span::before {
-    bottom: 7px;
+    bottom: 10px;
 }
   
 .nav-toggle-label span::after {
-    top: 7px;
+    top: 10px;
 }
   
 nav {
