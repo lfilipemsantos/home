@@ -16,7 +16,7 @@
         <script type="text/javascript" async src="https://cdn.credly.com/assets/utilities/embed.js"></script>
     </head>
     <body>
-        <header>
+        <header id="header">
             <h1 class="logo">Luis Santos</h1>
             <input type="checkbox" id="nav-toggle" class="nav-toggle">
             <nav>
@@ -47,6 +47,9 @@
                     </li>
                     <li>
                         <a onclick="window.location='#educations';uncheck()">Education</a>
+                    </li>
+                    <li>
+                        <a onclick="window.location='#photography';uncheck()">Photography</a>
                     </li>
                 </ul>
             </nav>
@@ -253,35 +256,25 @@
                         </div>
                     </div>
                 </div>
-                <!--<div id="books">
+                <div id="photography">
                     <div class="banner">
                         <div class="banner-title">
-                            Reading list
+                            Photography
                         </div>
                     </div>
                     <div>
-                        <div id="books-grid">
-                            <a href="" target="_blank" class="book">
-                                <div>
-                                    <img src="images/rich_dad.jpg" style="height:50px;margin-right: 10px;">
-                                </div>
-                                <div>
-                                    <div class="book-title">Rich Dad, Poor Dad</div>
-                                    <div class="book-date">finished</div>
-                                </div>
-                            </a>
-                            <a href="" target="_blank" class="book">
-                                <div>
-                                    <img src="images/file.png" style="width:50px;height:50px;margin-right: 10px;">
-                                </div>
-                                <div>
-                                    <div class="book-title">The PROFMUS Application: Development, Status, and Future Progress</div>
-                                    <div class="book-date">finished</div>
-                                </div>
-                            </a>
-                        </div>
+                        <div class="row"> 
+                            <div class="column">
+                              <img src="photo_portfolio/1.jpg" style="width:100%">
+                            </div>
+                            <div class="column">
+                              <img src="photo_portfolio/2.jpg" style="width:100%">
+                            </div>  
+                            <div class="column">
+                            </div>
+                          </div>
                     </div>
-                </div>-->
+                </div>
             </div>
 
             
@@ -813,6 +806,21 @@
 
             function uncheck() {
                 document.getElementById('nav-toggle').checked = false;
+            }
+        </script>
+
+        <script>
+            var prevScrollpos = window.pageYOffset;
+            window.onscroll = function() {
+                if (window.screen.width < 1025){
+                    var currentScrollPos = window.pageYOffset;
+                    if (prevScrollpos > currentScrollPos) {
+                        document.getElementById("header").style.top = "0";
+                    } else {
+                        document.getElementById("header").style.top = "-90px";
+                    }
+                    prevScrollpos = currentScrollPos;
+                }
             }
         </script>
 
