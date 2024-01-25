@@ -423,13 +423,12 @@ body {
 }
 
 .banner {
-    display: flex;
-    flex-direction: row;
     height: 70px;
     font-size: 21px;
     padding-top: 12px;
     padding-left: 0px;
     text-align: center;
+    width: 100%;
     /*border-bottom: 3px solid #272727;*/
 }
 
@@ -440,10 +439,8 @@ body {
     vertical-align: middle;
     height: 55px;
     width: 100%;
-    padding: 10px 13px;
     border-radius: 7px;
     line-height: 38px;
-    margin: 0 10px;
 }
 
 .banner-title{
