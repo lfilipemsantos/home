@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="theme-color" content="#111"/>
         <link rel="manifest" href="manifest.manifest">
-        <link rel="stylesheet" type="text/css" href="style2.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
@@ -75,40 +75,80 @@
                         Projects
                     </div>
                 </div>
-                <div>
-                    <div id="projects-grid">
-                        <div href="https://lfilipemsantos.github.io/weather" target="_blank" class="project">
-                            <div class="project-img"></div>
-                            <div class="project-details">
-                                <!--<div class="project-title">Weather</div>-->
-                                <div class="project-date">HTML • CSS • JS • IPMA API</div>
+                <ul id="project-cards">
+                    <li class="project-card" id="project-card-1">
+                        <div class="project-card-content">
+                            <div>
+                                <h2>Weather</h2>
+                                <p>HTML • CSS • JS • IPMA API</p>
+                                <div class="project-links">
+                                    <button>View more</button>
+                                </div>
                             </div>
-                            <div class="project-links">
-                                <button>View more</button>
-                            </div>
+                            <figure>
+                                <img src="images/weather_img.png" alt="">
+                            </figure>
                         </div>
-                        <div href="https://lfilipemsantos.github.io/rotas" target="_blank" class="project">
-                            <div class="project-img"></div>
-                            <div class="project-details">
-                                <!--<div class="project-title">Rotas</div>-->
-                                <div class="project-date">HTML • CSS • JS • Mapbox GL JS</div>
+                    </li>
+                    <li class="project-card" id="project-card-2">
+                        <div class="project-card-content">
+                            <div>
+                                <h2>Rotas</h2>
+                                <p>HTML • CSS • JS • Mapbox GL JS</p>
+                                <div class="project-links">
+                                    <button>View more</button>
+                                </div>
                             </div>
-                            <div class="project-links">
-                                <button>View more</button>
-                            </div>
+                            <figure>
+                                <img src="images/rotas_img.png" alt="">
+                            </figure>
                         </div>
-                        <div href="https://lfilipemsantos.github.io/rotas" target="_blank" class="project">
-                            <div class="project-img"></div>
-                            <div class="project-details">
-                                <!--<div class="project-title">Encomendas</div>-->
-                                <div class="project-date">Django • Python • HTML • CSS • JS</div>
+                    </li>
+                    <li class="project-card" id="project-card-3">
+                        <div class="project-card-content">
+                            <div>
+                                <h2>Encomendas</h2>
+                                <p>Django • Python • HTML • CSS • JS</p>
+                                <div class="project-links">
+                                    <button>View more</button>
+                                </div>
                             </div>
-                            <div class="project-links">
-                                <button>View more</button>
-                            </div>
+                            <figure>
+                                <img src="images/encomendas_img.png" alt="">
+                            </figure>
+                        </div>
+                    </li>
+                </ul>
+                <!--
+                <div id="projects-grid">
+                    <div href="https://lfilipemsantos.github.io/weather" target="_blank" class="project">
+                        <div class="project-img"></div>
+                        <div class="project-details">
+                            <div class="project-date">HTML • CSS • JS • IPMA API</div>
+                        </div>
+                        <div class="project-links">
+                            <button>View more</button>
                         </div>
                     </div>
-                </div>
+                    <div href="https://lfilipemsantos.github.io/rotas" target="_blank" class="project">
+                        <div class="project-img"></div>
+                        <div class="project-details">
+                            <div class="project-date">HTML • CSS • JS • Mapbox GL JS</div>
+                        </div>
+                        <div class="project-links">
+                            <button>View more</button>
+                        </div>
+                    </div>
+                    <div href="https://lfilipemsantos.github.io/rotas" target="_blank" class="project">
+                        <div class="project-img"></div>
+                        <div class="project-details">
+                            <div class="project-date">Django • Python • HTML • CSS • JS</div>
+                        </div>
+                        <div class="project-links">
+                            <button>View more</button>
+                        </div>
+                    </div>
+                </div>-->
             </div>   
             <div id="publications">
                 <div class="banner">
@@ -132,24 +172,6 @@
                                 <button class="publication-link" onclick='window.open("https://hcommons.org/deposits/objects/hc:45998/datastreams/CONTENT/content","_blank")'>View more</button>
                             </div>
                         </div>
-                        <!--<a href="https://fenix.tecnico.ulisboa.pt/cursos/merc/dissertacao/283828618790614" target="_blank" class="publication">
-                            <div>
-                                <img src="images/file.png" style="width:50px;height:50px;margin-right: 10px;">
-                            </div>
-                            <div>
-                                <div class="publication-title">Flexible Data Management and Publication with Mediawiki</div>
-                                <div class="publication-date">09/10/2020</div>
-                            </div>
-                        </a>
-                        <a href="https://hcommons.org/deposits/objects/hc:45998/datastreams/CONTENT/content" target="_blank" class="publication">
-                            <div>
-                                <img src="images/file.png" style="width:50px;height:50px;margin-right: 10px;">
-                            </div>
-                            <div>
-                                <div class="publication-title">The PROFMUS Application: Development, Status, and Future Progress</div>
-                                <div class="publication-date">2021</div>
-                            </div>
-                        </a>-->
                     </div>
                 </div>
             </div>  
@@ -226,6 +248,15 @@
                 </div>
                 <div>
                     <div id="educations-grid">
+                        <div class="education">
+                            <div>
+                                <a href="https://www.credly.com/badges/5b1e648a-8fcd-411c-93cb-6a220acb91a1/public_url" target="_blank"><img src="images/SREV2.png" style="width:50px;height:50px;margin-right: 10px;"></a>
+                            </div>
+                            <div>
+                                <div class="education-title">IBM Certified Professional SRE - Cloud v2</div>
+                                <div class="education-date">28/11/2022</div>
+                            </div>
+                        </div>
                         <div class="education">
                             <div>
                                 <a href="https://fenix.tecnico.ulisboa.pt/cursos/merc" target="_blank"><img src="images/ist.png" style="width:50px;height:50px;margin-right: 10px;"></a>
@@ -665,100 +696,6 @@
                         </div>
                     </div>
                 </div>   
-            </div>
-            
-
-            <div id="education" class="section">
-                <div class="content" style="width:100%; margin-left: auto; margin-right: auto;">
-                    <div class="activities">
-                        <div class="activity">
-                            <h2 class="activity_title">
-                                Mestrado em Engenharia de Telecomunicações e Informática
-                            </h2>
-                            <table style="width:100%; text-align: left;">
-                                <tr style="width: 100%;">
-                                    <th class="activity_icons"> 
-                                        <small class="activity_info">
-                                            <i class="fa fa-calendar"></i>
-                                        </small>
-                                    </th>
-                                    <th> 
-                                        <small class="activity_info">
-                                            | March 2018 - October 2020
-                                        </small>
-                                    </th>
-                                </tr>
-                                <tr style="width: 100%;">
-                                    <th class="activity_icons"> 
-                                        <small class="activity_info">
-                                            <i class="fa fa-map-marker"></i>
-                                        </small>
-                                    </th>
-                                    <th> 
-                                        <small class="activity_info">
-                                                | Instituto Superior Técnico
-                                        </small>
-                                    </th>
-                                </tr>
-                                <tr style="width: 100%;">
-                                    <th class="activity_icons"> 
-                                        <small class="activity_info">
-                                            <i class="fa fa-map-o"></i>
-                                        </small>
-                                    </th>
-                                    <th> 
-                                        <small class="activity_info">
-                                                | Lisboa, Portugal
-                                        </small>
-                                    </th>
-                                </tr>
-                            </table>
-                        </div>                  
-                        <div class="activity">
-                            <h2 class="activity_title">
-                                Licenciatura em Engenharia de Telecomunicações e Informática
-                            </h2>
-                            <table style="width:100%; text-align: left;">
-                                <tr style="width: 100%;">
-                                    <th class="activity_icons"> 
-                                        <small class="activity_info">
-                                            <i class="fa fa-calendar"></i>
-                                        </small>
-                                    </th>
-                                    <th> 
-                                        <small class="activity_info">
-                                            | September 2014 - March 2018
-                                        </small>
-                                    </th>
-                                </tr>
-                                <tr style="width: 100%;">
-                                    <th class="activity_icons"> 
-                                        <small class="activity_info">
-                                            <i class="fa fa-map-marker"></i>
-                                        </small>
-                                    </th>
-                                    <th> 
-                                        <small class="activity_info">
-                                                | Instituto Superior Técnico
-                                        </small>
-                                    </th>
-                                </tr>
-                                <tr style="width: 100%;">
-                                    <th class="activity_icons"> 
-                                        <small class="activity_info">
-                                            <i class="fa fa-map-o"></i>
-                                        </small>
-                                    </th>
-                                    <th> 
-                                        <small class="activity_info">
-                                                | Lisboa, Portugal
-                                        </small>
-                                    </th>
-                                </tr>
-                            </table>
-                        </div> 
-                    </div>       
-                </div>   
             </div>-->
         </div>
 
@@ -784,8 +721,6 @@
 
         <!--<script>
             var prevScrollpos = window.pageYOffset;
-            console.log("sup")
-            console.log(document.getElementById("home").scrollTop)
             document.getElementById("home").onscroll = function() {
                 if (window.screen.width < 1025){
                     console.log(document.getElementById("home").scrollTop)
