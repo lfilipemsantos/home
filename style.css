@@ -19,7 +19,7 @@
 
 :root {
     --clr-background: #FDF9E6;
-    --clr-background: #ffffff;
+    --clr-background: #fcf7ed;
     --clr-container-on-background: #ffffff;
     --clr-text: black;
     --clr-primary: hsl(96, 46%, 68%);
@@ -149,6 +149,13 @@ body {
     padding: 0px 20px;
 }
 
+#home > *::before {
+    content: '';
+    display: block;
+    height: 50px;
+    margin-top: 50px;
+    visibility: hidden;
+  }
 
 #profile {
     padding: 0 30px 30px 30px;
@@ -750,19 +757,19 @@ a:hover {
 .logo {
     font-family: 'Chunk Black', sans-serif;
     color: black;
-    font-size: 40px;
+    font-size: px;
     text-align: left;
     margin: 0;
-    padding-top: 20px;
+    padding-top: 23px;
     padding-left: 0.5em;
-    padding-bottom: 20px;
+    padding-bottom: 22px;
     z-index: 999;
     -webkit-backdrop-filter: blur(30px);
     backdrop-filter: blur(30px);
 }
 
 header {
-    background: rgba(252, 247, 237, .2784313725);
+    background: rgba(251, 228, 182, 0.6);
     text-align: center;
     position: fixed;
     z-index: 999;
@@ -828,7 +835,7 @@ nav {
     top: 00%;
     left: 0;
     height: 100vh;
-    background: rgba(252, 247, 237, .2784313725);
+    background: rgba(251, 228, 182, 0.6);
     z-index: 5;
     width: 100%;
     transform: scale(1, 0);
@@ -869,7 +876,7 @@ nav li:hover {
 nav li {
     margin-bottom: 30px;
     opacity: 0;
-    transform: translateY(-5vh);
+    transform: translateX(5vh);
     text-align: right;
     width: 90%;
 }
@@ -893,7 +900,7 @@ nav a {
   
 .nav-toggle:checked ~ nav li {
     opacity: 1;
-    transform: translatey(0vh);
+    transform: translateX(0vh);
 }
   
 .nav-toggle:checked ~ nav li:nth-child(1) {
@@ -994,7 +1001,7 @@ nav a {
 
 #footer {
     box-sizing: border-box;
-    background-color: var(--clr-footer) !important;
+    background: rgba(251, 228, 182, 0.6);
     color: var(--clr-text);
     bottom: 0;
     height: 190px;
