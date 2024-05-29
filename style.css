@@ -37,7 +37,6 @@
 }
 
 html {
-    overflow-x: hidden;
     width: 100%;
 }
 
@@ -50,7 +49,7 @@ body {
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
     font-size: 1rem;
-    overflow-x: hidden;
+    overflow-x: scroll;
     width: 100%;
 }
 
@@ -136,26 +135,35 @@ body {
     padding-top: 90px ;
     justify-items: center;
     box-sizing: border-box;
-    overflow-x: hidden;
     height: fit-content;
-    overflow-y: hidden;
 }
-
 
 #home > * {
     background-color: var(--clr-background);
     width: 100%;
-    margin-bottom: 100px;
     padding: 0px 20px;
 }
 
-#home > *::before {
+#home > *:not(:first-child) {
+    animation: fade-in linear;
+    animation-timeline: view();
+    animation-range-start: entry 0;
+    animation-range-end: entry 50vh;
+}
+
+@keyframes fade-in {
+    from {scale: 0.8; opacity: 0;}
+    to {scale: 1; opacity: 1;}
+}
+
+#home > *:not(:first-child)::before {
     content: '';
     display: block;
-    height: 50px;
-    margin-top: 50px;
+    height: 60px;
+    margin-top: 30px;
     visibility: hidden;
-  }
+}
+
 
 #profile {
     padding: 0 30px 30px 30px;
@@ -204,10 +212,6 @@ body {
     margin: auto;
     padding: 15px 0px;
     box-sizing: border-box;
-}
-
-#publications-grid {
-
 }
 
 @media (min-width: 750px) {
@@ -303,6 +307,7 @@ body {
     top:10px;
 }
 
+
 @keyframes scale {
 	to {
 		transform:
@@ -351,28 +356,12 @@ body {
 }
 
 .project-card {
-    position: sticky;
     top: 100px;
     width: 100%;
     max-width: 400px;
     aspect-ratio: 2/1;
 }
 
-@supports (animation-timeline: view()) {
-    
-    .project-card {
-        --index0: calc(var(--index) - 1);
-        --reverse-index: calc(var(--numcards) - var(--index0));
-        --reverse-index0: calc(var(--reverse-index) - 1);
-    }
-    .project-card-content {
-        --start-range: calc(var(--index0) / var(--numcards)* 100%);
-        --end-range: calc((var(--index)) / var(--numcards)* 100%);
-        animation: linear scale forwards;
-        animation-timeline: --cards-element-scrolls-in-body;
-        animation-range: exit-crossing var(--start-range) exit-crossing var(--end-range);
-    }
-}
 
 .project-card-content {
     box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.1), 0 1em 2em rgba(0, 0, 0, 0.1);
@@ -1124,3 +1113,17 @@ nav a {
       max-width: 100%;
     }
   }
+
+
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(20vh);
+    visibility: hidden;
+    transition: opacity 0.6s ease-out, transform 1.2s ease-out;
+    will-change: opacity, visibility;
+}
+.fade-in-section.is-visible {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+}
