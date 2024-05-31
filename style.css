@@ -356,6 +356,12 @@ body {
 
 
 
+@keyframes row-horizontal {
+    from {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+}
 
 #projects-grid {
     /*display: grid;
@@ -366,7 +372,7 @@ body {
     display: flex;
     flex-wrap: nowrap;
     margin: auto;
-    padding: 15px 0px;
+    padding: 15px 15px;
     gap: 20px;
     box-sizing: border-box;
 }
@@ -376,6 +382,10 @@ body {
     flex-direction: column;
     scroll-snap-align: center;
     min-width: 70%;
+    view-timeline-name: --item-timeline3;
+    animation: row-horizontal both;
+    animation-timeline: view(inline);
+    animation-range: entry 0% contain 50%;
 }
 
 
@@ -465,7 +475,7 @@ body {
     background-color: white;
     padding: 10px;
     border-radius: 20px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
 }
 
 .banner {
