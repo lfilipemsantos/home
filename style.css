@@ -24,7 +24,6 @@
     --clr-text: black;
     --clr-primary: hsl(96, 46%, 68%);
     --clr-footer: #007947;
-
     --card-height: 50vw;
     --card-margin: 4vw;
     --card-top-offset: 1em;
@@ -37,7 +36,7 @@
 }
 
 html {
-    width: 100%;
+    width: 100vw;
 }
 
 body {
@@ -53,39 +52,8 @@ body {
     width: 100%;
 }
 
-
-.hero_section {
-    background-color: #007947 !important;
-    background-color: var(--clr-background);
-    height: fit-content;
-}
-
-.hero_title {
-    font-size:20vw;
-    font-family: 'Chunk Black', sans-serif;
-    text-align: center;
-}
-
-.hero_subtitle {
-    font-size-adjust: initial;
-    font-size: 1.5vmax;
-    font-family: 'Forum', sans-serif;
-    text-align: center;
-}
-
 ::-webkit-scrollbar {
     display: none;
-}
-
-#name {
-    font-family: 'Poppins', sans-serif;
-    font-size: 32px;
-    margin: 0;
-    /*background-image: linear-gradient(45deg, rgb(43, 250, 222) 0%, rgb(231, 117, 226) 100%);
-    background-image: linear-gradient(45deg, rgb(49, 117, 110) 0%, rgb(21, 51, 127) 100%);
-    -webkit-background-clip: text;*/
-    color: var(--clr-background);
-    padding: 0;
 }
 
 #email, #download-cv {
@@ -106,23 +74,6 @@ body {
 
 #email:hover, #download-cv:hover {
     text-decoration: underline;
-}
-
-#self-photo-container {
-    display: block;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
-#interests, #projects, #experience, #education, #contacts {
-    display: none;
-    height: auto;
-}
-
-.section_divider {
-    width: 100%;
 }
 
 
@@ -182,7 +133,7 @@ body {
     display: flex;
     flex-direction: row;
     gap: 40px;
-    width: fit-content;
+    width: 100vw;
     max-width: 2000px;
     align-items: flex-start;
     font-family: 'Forum', sans-serif;
@@ -302,11 +253,6 @@ body {
 
 }
 
-#projects_card > .banner {
-    position: sticky;
-    top:10px;
-}
-
 
 @keyframes scale {
 	to {
@@ -315,12 +261,6 @@ body {
 	}
 }
 
-@supports (animation-timeline: view()) {
-    #project-cards {
-        --numcards: 3;
-        view-timeline-name: --cards-element-scrolls-in-body;
-    }
-}
 
 #project-cards {
     list-style: none;
@@ -333,23 +273,18 @@ body {
 }
 
 #project-card-1 {
-    --index: 1;
-
     .project-card-content {
         background-color: #bbd5db;
     }
 }
 
 #project-card-2 {
-    --index: 2;
-
     .project-card-content {
         background-color: #c1dcbf;
     }
 }
 
 #project-card-3 {
-    --index: 3;
     .project-card-content {
         background-color: #dfcebe;
     }
@@ -423,51 +358,36 @@ body {
 
 
 #projects-grid {
-    display: grid;
+    /*display: grid;
     grid-template-columns: repeat(1,minmax(200px,1fr));
-    grid-template-rows: repeat(3, 1fr);
-    width: 100%;
-    max-width: 2000px;
-    gap: 1rem;
+    grid-template-rows: repeat(3, 1fr);*/
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+    display: flex;
+    flex-wrap: nowrap;
     margin: auto;
     padding: 15px 0px;
+    gap: 20px;
     box-sizing: border-box;
 }
 
 #projects-grid > * {
-    aspect-ratio: 1 / 1;
     display: flex;
     flex-direction: column;
-    align-self: start;
-    width: 100%;
-    justify-self: center;
-    position: relative;
-    background-size: cover;
-    background-position: center;
+    scroll-snap-align: center;
+    min-width: 70%;
 }
 
-@media (min-width: 750px) {
-    #projects-grid {
-        grid-template-columns: repeat(2,minmax(200px,1fr));
-        grid-template-rows: repeat(2, 1fr);
-    }
-}
-@media (min-width: 1000px) {
-    #projects-grid {
-        grid-template-columns: repeat(3,minmax(200px,1fr));
-        grid-template-rows:none;
-    }
-}
 
 #projects-grid > *:nth-child(1) > .project-img {
     background-image: url("./images/weather_img.png");
 }
 
-#projects-grid>*:nth-child(2) .project-img {
+#projects-grid > *:nth-child(2) .project-img {
     background-image: url("./images/rotas_img.png");
 }
 
-#projects-grid>*:nth-child(3) .project-img {
+#projects-grid > *:nth-child(3) .project-img {
     background-image: url("./images/encomendas_img.png");
 }
 
@@ -762,7 +682,7 @@ header {
     text-align: center;
     position: fixed;
     z-index: 999;
-    width: 100%;
+    width: 100vw;
     top: 0px;
     left: 50%;
     transform: translateX(-50%);
