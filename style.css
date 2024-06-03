@@ -95,7 +95,7 @@ body {
     padding: 0px 20px;
 }
 
-#home > *:not(:first-child) {
+#home > *:not(:first-child):not(:last-child) {
     animation: fade-in linear;
     animation-timeline: view();
     animation-range-start: entry 0;
@@ -107,7 +107,7 @@ body {
     to {scale: 1; opacity: 1;}
 }
 
-#home > *:not(:first-child)::before {
+#home > *::before {
     content: '';
     display: block;
     height: 60px;
@@ -525,35 +525,12 @@ body {
     padding-bottom: 60px;
     width: min-content !important;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-items: center;
     justify-self: center;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-}
-
-
-.projectBox {
-    box-sizing: border-box;
-    background: rgba(49, 78, 78, 0.3);
-    height: 400px;
-    width: 20%;
-    padding: 10px 10px 10px 10px;
-    border-radius: 10px;
-    margin: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-start;
-    position: relative;
-    box-shadow: 0px 10px 30px -10px rgba(0, 0, 0, 0.4);
-    overflow: hidden;
-}
-
-.projectBox:hover {
-    background: rgba(49, 78, 78, 0.5);
-    cursor: pointer;
 }
 
 a.certification, a.publication, a.project, a.book {
@@ -594,17 +571,15 @@ a:hover {
 
 .links_text {
     display: block;
-    font-size: 12px;
+    font-size: 30px;
     color: var(--clr-text);
+    text-decoration: none;
 }
 
 .links {
+    text-align: left;
     display: inline-block;
-    font-size: 35px;
-    width: fit-content;
-    margin-top: 0;
-    margin: 0px 20px;
-    height: 64px;
+    margin: 5px 0px;
 }
 
 .links_icon:hover {
@@ -767,7 +742,7 @@ nav {
   
 nav ul {
     margin: 0;
-    margin-top: 200px;
+    margin-top: 40%;
     padding: 0;
     list-style: none;
     text-align: center;
@@ -840,6 +815,10 @@ nav a {
   
 .nav-toggle:checked ~ nav li:nth-child(5) {
     transition: all 250ms ease-in-out 750ms;
+}
+  
+.nav-toggle:checked ~ nav li:nth-child(6) {
+    transition: all 250ms ease-in-out 850ms;
 }
 
 .nav-toggle:checked ~ .nav-toggle-label span {
@@ -920,16 +899,16 @@ nav a {
 
 #footer {
     box-sizing: border-box;
-    background: rgba(251, 228, 182, 0.6);
     color: var(--clr-text);
     bottom: 0;
     height: 190px;
     margin-bottom: 0px !important;
+    width: 100vw;
 }
 
 #footer > .content {
-    width:min-content;
-    margin-left: auto;
+    width: min-content;
+    margin-left: 0;
     margin-right: auto;
 }
 
