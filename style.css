@@ -757,9 +757,9 @@ nav a::before {
     bottom: -7px;
     border-radius: 3px;
     z-index: 999;
-    background-color: #FDF9E6;
+    background-color: black;
     opacity: 0;
-    transform: translate3d(0,5px,0);
+    transform: translate3d(0px,5px,40px);
     transition: all 0.5s cubic-bezier(.175,.885,.32,1.275);
 }
 
@@ -838,7 +838,7 @@ nav a {
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
 }
   
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1180px) {
     nav li:hover a::before {
         opacity: 1;
         transform: translateZ(0) scale3d(1.1,1.1,1.1) rotate(0deg);
@@ -849,16 +849,21 @@ nav a {
         transform: translateZ(0) scale3d(1.1,1.1,1.1) rotate(0deg);
     }
     .nav-toggle-label {
-      display: none;
+        display: none;
     }
   
     header {
-      display: grid;
-      grid-template-columns: 0.1fr auto minmax(600px, 3fr) 0.1fr;
+        display: grid;
+        grid-template-columns: 0.1fr auto minmax(1000px, 3fr) 0.1fr;
+        -webkit-backdrop-filter: blur(30px);
+        backdrop-filter: blur(30px);
+        transition: unset;
     }
     
     .logo {
-      grid-column: 2 / 3;
+        grid-column: 2 / 3;
+        -webkit-backdrop-filter: none;
+        backdrop-filter: none;
     }
     
     nav {
@@ -870,11 +875,13 @@ nav a {
         background: none;
         top: initial;
         left: initial;
-        
+        -webkit-backdrop-filter: none;
+        backdrop-filter: none;
         grid-column: 3 / 4;
         display: flex;
-        justify-content: flex-end;
+        justify-content: flex-start;
         align-items: center;
+        transition: unset;
     }
     
     nav ul {
