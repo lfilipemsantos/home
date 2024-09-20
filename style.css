@@ -157,7 +157,7 @@ body {
 }
 
 .profile_image > img {
-    
+
 }
 
 #publications-grid {
@@ -441,6 +441,10 @@ body {
     font-size: 1.8rem;
     font-weight: 800;
     padding-top: 0;
+}
+
+.project-phrase {
+    text-align: center;
 }
 
 .project-links {
