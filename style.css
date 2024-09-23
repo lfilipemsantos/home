@@ -445,12 +445,12 @@ body {
     max-width: 100%;
     height: auto;
     margin: auto;
-    max-height: 560px;
+    max-height: fit-content;
 }
 
 .project-img img {
-    height: 100%;
-    max-width: 100%;
+    max-height: 560px;
+    max-width: 90%;
 }
 
 .project-details {
@@ -589,33 +589,6 @@ a.certification, a.publication, a.project, a.book {
     text-decoration: none;
 }
 
-.header_title {
-    text-align: center;
-    font-family: 'Poppins', sans-serif;
-    margin-top: 20px;
-    font-weight: bolder;
-    font-size: 40px;
-}
-
-#header_description {
-    text-align: justify;
-    font-family: 'Poppins', sans-serif;
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 5px;
-    font-weight: bolder;
-    font-size: 20px;
-    max-width: 40ch;
-}
-
-@media (max-width: 620px) {
-    #header_description {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-}
-
 a:hover {
     cursor: pointer;
 }
@@ -714,7 +687,7 @@ a:hover {
 }
 
 header {
-    background: rgba(251, 228, 182, 0.6);
+    background: rgba(219, 219, 219, 0.6);
     text-align: center;
     position: fixed;
     z-index: 999;
@@ -780,7 +753,7 @@ nav {
     top: 00%;
     left: 0;
     height: 100vh;
-    background: rgba(251, 228, 182, 0.6);
+    background: rgba(219, 219, 219, 0.6);
     z-index: 5;
     width: 100%;
     transform: scale(1, 0);
