@@ -370,6 +370,32 @@ body {
     }
 }
 
+#link-to-projects {
+    position:absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    bottom: 32px !important;
+    font-family: 'Poppins', sans-serif;
+    min-height: 0;
+    transition: letter-spacing 0.3s ease-in-out;
+}
+
+#link-to-projects-arrow {
+    transform: rotate(90deg);
+    height: fit-content;
+    width: fit-content;
+    margin-top: -10px;
+}
+
+#link-to-projects:hover {
+    color: #474747;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+}
+
+
+
 #projects-grid {
     display: flex;
     flex-direction: column;
