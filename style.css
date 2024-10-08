@@ -573,10 +573,9 @@ body {
 
 .outlinks{
     margin-top: 20px;
-    padding-bottom: 60px;
     width: min-content !important;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-items: center;
     justify-self: center;
     text-align: center;
@@ -595,15 +594,15 @@ a:hover {
 
 .links_text {
     display: block;
-    font-size: 30px;
-    color: var(--clr-text);
+    font-size: 18px;
+    color: white;
     text-decoration: none;
 }
 
 .links {
     text-align: left;
     display: inline-block;
-    margin: 5px 0px;
+    margin: 5px 10px;
 }
 
 .links_icon:hover {
@@ -766,7 +765,7 @@ nav {
   
 nav ul {
     margin: 0;
-    margin-top: 40%;
+    margin-top: 20vh;
     padding: 0;
     list-style: none;
     text-align: center;
@@ -800,11 +799,11 @@ nav li {
 }
   
 nav a {
-    font-size: 8vw !important;
+    font-size: 6vh !important;
     font-family: 'Chunk Black', sans-serif;
     color: black;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     text-transform: uppercase;
     opacity: 1;
     transition: opacity 150ms ease-in-out;
@@ -931,14 +930,20 @@ nav a {
 #footer {
     box-sizing: border-box;
     color: var(--clr-text);
+    background-color: rgb(46, 46, 46);
     bottom: 0;
-    height: 190px;
+    height: 100px;
     margin-bottom: 0px !important;
+    margin-top: 30px;
     width: 100vw;
 }
 
+#footer::before {
+    height: 0px;
+}
+
 #footer > .content {
-    width: min-content;
+    width: 100%;
     margin-left: 0;
     margin-right: auto;
 }
